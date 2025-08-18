@@ -15,6 +15,22 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <style>
+        @keyframes breath {
+        0%, 100% {
+            transform: scale(1.2);
+            opacity: 1;
+        }
+        50% {
+            transform: scale(1.02);
+            opacity: 0.9;
+        }
+        }
+        .breath {
+            animation: breath 2.4s ease-in-out infinite;
+        }
+    </style>
+
 </head>
 
 <body class="min-h-screen flex flex-col bg-gray-200">
@@ -30,22 +46,22 @@
             <div class="w-3/4">
                 <ul class="flex justify-end gap-x-8 text-white font-bold text-xl">
                     <li
-                        class="w-auto h-8 px-2 text-center bg-transparent hover:rounded-md hover:bg-[#1e482a] hover:text-white transform duration-300 hover:-translate-y-1
+                        class="w-auto h-8 px-2 text-center bg-transparent hover:bg-[#1e482a] hover:text-white transform duration-300 hover:-translate-y-1
                         <?php echo $currentPage === 'index.php' ? 'border-b-4 border-white pb-8' : ''; ?>">
                         <a href="./">Inicio</a>
                     </li>
                     <li
-                        class="w-auto h-8 px-2 text-center bg-transparent hover:rounded-md hover:bg-[#1e482a] hover:text-white transform duration-300 hover:-translate-y-1
+                        class="w-auto h-8 px-2 text-center bg-transparent hover:bg-[#1e482a] hover:text-white transform duration-300 hover:-translate-y-1
                         <?php echo $currentPage === 'contact.php' ? 'border-b-4 border-white pb-8' : ''; ?>">
                         <a href="./contact.php">Contacto</a>
                     </li>
                     <li
-                        class="w-auto h-8 px-2 text-center bg-transparent hover:rounded-md hover:bg-[#1e482a] hover:text-white transform duration-300 hover:-translate-y-1
+                        class="w-auto h-8 px-2 text-center bg-transparent hover:bg-[#1e482a] hover:text-white transform duration-300 hover:-translate-y-1
                         <?php echo $currentPage === 'about.php' ? 'border-b-4 border-white pb-8' : ''; ?>">
                         <a href="./about.php">Nosotros</a>
                     </li>
                     <li
-                        class="w-auto h-8 px-2 text-center bg-transparent hover:rounded-md hover:bg-[#1e482a] hover:text-white transform duration-300 hover:-translate-y-1
+                        class="w-auto h-8 px-2 text-center bg-transparent hover:bg-[#1e482a] hover:text-white transform duration-300 hover:-translate-y-1
                         <?php echo $currentPage === 'asFunction.php' ? 'border-b-4 border-white pb-8' : ''; ?>">
                         <a href="./asFunction.php">Cómo funciona</a>
                     </li>

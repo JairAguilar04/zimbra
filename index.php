@@ -8,12 +8,12 @@ include("./includes/header.php");
         <div class="relative w-full overflow-hidden">
             <!-- Slides -->
             <div class="w-full">
-                <img src="https://picsum.photos/id/1015/1920/600" alt="Imagen 1"
+                <img src="./assets/img/banners/banner_uno.png" alt="Imagen 1"
                     class="slide w-full object-cover hidden" />
-                <img src="https://picsum.photos/id/1016/1920/600" alt="Imagen 2"
+                <img src="./assets/img/banners/banner_dos.png" alt="Imagen 2"
                     class="slide w-full object-cover hidden" />
-                <img src="https://picsum.photos/id/1018/1920/600" alt="Imagen 3"
-                    class="slide w-full object-cover hidden" />
+                <!-- <img src="https://picsum.photos/id/1018/1920/600" alt="Imagen 3"
+                    class="slide w-full object-cover hidden" /> -->
             </div>
 
             <!-- Controles -->
@@ -44,9 +44,8 @@ include("./includes/header.php");
 
             <div>
                 <img src="./assets/img/arqui_producto.png" alt="ArquiZimbra"
-                    class="w-3/4 mx-auto mt-6 rounded-md hover:shadow-lg hover:shadow-[#1e482a]/80 transform duration-300 hover:-translate-y-1" />
+                    class="w-3/4 mx-auto mt-6 rounded-md hover:shadow-2xl hover:shadow-gray-400 transform duration-300 hover:-translate-y-1" />
             </div>
-
         </div>
 
         <div class="w-1/2">
