@@ -25,39 +25,23 @@
         <h2 class="text-center text-3xl text-[#1e482a] font-bold mt-14">Así resolvemos tus necesidades</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-10">
             <!-- Card 1 -->
-            <div class="bg-[#1e482a] text-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-                <img class="w-full h-48 object-cover" src="./assets/img/columnas/card_uno.jpg" alt="Card 1">
-                <div class="p-4">
-                <h2 class="text-xl font-bold mb-2">Título 1</h2>
-                <p class="text-sm">Lorem ipsum dolor sit amet.</p>
-                </div>
+            <div class="bg-white rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-gray-400 duration-300">
+                <img class="w-full h-full object-cover" src="./assets/img/columnas/card_uno.jpg" alt="Card 1">
             </div>
 
             <!-- Card 2 -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-                <img class="w-full h-48 object-cover" src="./assets/img/columnas/card_dos.jpg" alt="Card 2">
-                <div class="p-4">
-                <h2 class="text-xl font-semibold text-gray-800 mb-2"></h2>
-                <p class="text-gray-600 text-sm"></p>
-                </div>
+            <div class="bg-white rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-gray-400 transition-shadow duration-300">
+                <img class="w-full h-full object-cover" src="./assets/img/columnas/card_dos.jpg" alt="Card 2">
             </div>
 
             <!-- Card 3 -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-                <img class="w-full h-48 object-cover" src="./assets/img/columnas/card_tres.jpg" alt="Card 3">
-                <div class="p-4">
-                <h2 class="text-xl font-semibold text-gray-800 mb-2"></h2>
-                <p class="text-gray-600 text-sm"></p>
-                </div>
+            <div class="bg-white rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-gray-400 transition-shadow duration-300">
+                <img class="w-full h-full object-cover" src="./assets/img/columnas/card_tres.jpg" alt="Card 3">
             </div>
 
             <!-- Card 4 -->
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-                <img class="w-full h-48 object-cover" src="./assets/img/columnas/card_cuatro.jpg" alt="Card 4">
-                <div class="p-4">
-                <h2 class="text-xl font-semibold text-gray-800 mb-2"></h2>
-                <p class="text-gray-600 text-sm"></p>
-                </div>
+            <div class="bg-red-500 rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-gray-400 transition-shadow duration-300">
+                <img class="w-full h-full " src="./assets/img/columnas/card_cuatro.jpg" alt="Card 4">
             </div>
         </div>
     </div>
@@ -68,7 +52,7 @@
         <div class="flex gap-x-5 mt-8">
             <!-- imagen -->
             <div class="flex-1 p-4">
-                <img src="./assets/img/instructivo.png" alt="Instructivo" class="w-1/2 mx-auto object-cover rounded-lg shadow-xl">
+                <img src="./assets/img/instructivo.png" alt="Instructivo" class="w-1/2 mx-auto object-cover rounded-lg shadow-xl hover:shadow-2xl hover:shadow-gray-400">
             </div>
 
             <!-- instrucciones -->

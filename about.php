@@ -15,7 +15,7 @@ $pageTitle = "Nosotros";
                 </p>
             </div>
             <div>
-                <img src="./assets/img/tienda.png" alt="Tienda" class="rounded-md shadow-md shadow-gray-600 transform duration-300 hover:-translate-y-1">
+                <img src="./assets/img/tienda.png" alt="Tienda" class="rounded-md shadow-md shadow-gray-600 transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-gray-400">
             </div>
         </div>
     </section>
