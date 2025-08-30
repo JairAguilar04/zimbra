@@ -1,5 +1,5 @@
     <!-- footer -->
-    <footer class="bg-[#1e482a] text-white py-6">
+    <footer class="bg-[#2f767c] text-white py-6">
         <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
 
             <!-- enlaces -->

@@ -13,8 +13,8 @@
             </iframe>
         </div>
         <div>
-            <h2 class="text-center text-3xl text-[#1e482a] font-bold my-5">La forma perfecta para cada columna</h2>
-            <h3 class="text-xl text-justify">
+            <h2 class="text-center text-3xl text-[#1e482a] font-bold mt-14">La forma perfecta para cada columna</h2>
+            <h3 class="text-xl text-justify mt-5">
                 Simplifica el proceso de colado y obtén columnas firmes, resistentes y con acabados uniformes. Nuestro sistema práctico y eficiente permite una instalación rápida, reduce el tiempo de obra y asegura resultados profesionales en cada proyecto.
             </h3>
         </div>
@@ -46,6 +46,43 @@
         </div>
     </div>
 
+    <div class="text-center">
+        <button type="button" class="sm:w-auto w-full bg-[#2f767c] rounded-md text-white text-xl font-bold px-4 py-2 transform duration-300 hover:bg-[#2f767c]/80 hover:-translate-y-1">Ver más</button>
+
+        <div class=" my-8 overflow-y grid grid-cols-5 gap-4">
+            <div class="w-52 h-52 bg-red-500 gap-5 rounded-md">
+                <img src="./assets/img/columnas/card_cuatro.jpg" alt="">
+            </div>
+
+            <div class="w-52 h-52 bg-red-500 gap-5 rounded-md">
+                <img src="./assets/img/columnas/card_cuatro.jpg" alt="">
+            </div>
+
+
+            <div class="w-52 h-52 bg-red-500 gap-5 rounded-md">
+                <img src="./assets/img/columnas/card_cuatro.jpg" alt="">
+            </div>
+
+            <div class="w-52 h-52 bg-red-500 gap-5 rounded-md">
+                <img src="./assets/img/columnas/card_cuatro.jpg" alt="">
+            </div>
+
+            <div class="w-52 h-52 bg-red-500 gap-5 rounded-md">
+                <img src="./assets/img/columnas/card_cuatro.jpg" alt="">
+            </div>
+
+            <div class="w-52 h-52 bg-red-500 gap-5 rounded-md">
+                <img src="./assets/img/columnas/card_cuatro.jpg" alt="">
+            </div>
+
+            <div class="w-52 h-52 bg-red-500 gap-5 rounded-md">
+                <img src="./assets/img/columnas/card_cuatro.jpg" alt="">
+            </div>
+
+
+        </div>
+    </div>
+
     <!-- instructivo -->
      <div class="my-14">
         <h2 class="text-center text-3xl text-[#1e482a] font-bold">Manual de instalación</h2>
@@ -57,7 +94,7 @@
 
             <!-- instrucciones -->
             <div class="flex-1 p-4">
-                <h2 class="text-2xl text-gray-800 font-bold">Instrucciones:</h2>
+                <h2 class="text-2xl text-[#f78910] font-bold">Instrucciones:</h2>
                 <ol class="list-decimal list-inside space-y-4 text-gray-700 text-justify mt-4">
                     <li>
                         Sitúa la cimbra de cartón alrededor del área donde se formará la columna. Asegúrate de que quede firme y alineada
