@@ -30,32 +30,32 @@ $pageTitle = "Contacto";
                   <div class="flex md:flex-row flex-col gap-x-5">
                     <!-- email -->
                     <div class="md:w-3/5 w-full">
-                      <label for="email" class="block mb-2">
+                      <label for="email" class="block mb-2 text-[#2f767c] font-bold">
                           Correo electrónico<span class="font-bold text-red-600">*</span>
                       </label>
-                      <input type="email" name="email" id="email" class="w-full h-10 text-gray-700 rounded-md border border-[#1e482a] px-2 focus:ring focus:ring-[#1e482a] outline-none" placeholder="Correo electrónico"/>
+                      <input type="email" name="email" id="email" class="w-full h-10 text-gray-700 rounded-md px-2 bg-gray-200 outline-none" placeholder="Correo electrónico"/>
                     </div>
                     <!-- phone -->
-                    <div class="md:w-2/5 w-full">
-                      <label for="phone" class="block mb-2">
+                    <div class="md:w-2/5 w-full sm:mt-0 mt-5">
+                      <label for="phone" class="block mb-2 text-[#2f767c] font-bold">
                           Teléfono<span class="font-bold text-red-600">*</span>
                       </label>
-                      <input type="phone" name="phone" id="phone" class="w-full h-10 text-gray-700 rounded-md border border-[#1e482a] px-2 focus:ring focus:ring-[#1e482a] outline-none" placeholder="Teléfono"/>
+                      <input type="phone" name="phone" id="phone" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Teléfono"/>
                     </div>
                   </div>
                   <!-- affair -->
                   <div>
-                    <label for="affair" class="block mb-2">
+                    <label for="affair" class="block mb-2 text-[#2f767c] font-bold">
                       Asunto<span class="font-bold text-red-600">*</span>
                     </label>
-                    <input type="text" name="affair" id="affair" class="w-full h-10 text-gray-700 rounded-md border border-[#1e482a] px-2 focus:ring focus:ring-[#1e482a] outline-none" placeholder="Asunto"/>
+                    <input type="text" name="affair" id="affair" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Asunto"/>
                   </div>
                   <!-- message -->
                   <div>
-                    <label for="message" class="block mb-2">
+                    <label for="message" class="block mb-2 text-[#2f767c] font-bold">
                       Mensaje<span class="font-bold text-red-600">*</span>
                     </label>
-                    <textarea name="message" id="message" cols="20" rows="4" class="w-full text-gray-700 rounded-md border border-[#1e482a] px-2 focus:ring focus:ring-[#1e482a] outline-none" placeholder="Mensaje..."></textarea>
+                    <textarea name="message" id="message" cols="20" rows="4" class="w-full text-gray-700 pl-2 rounded-md bg-gray-200 outline-none" placeholder="Mensaje..."></textarea>
                   </div>
                 </div>
                 <!-- button -->
