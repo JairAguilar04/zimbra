@@ -20,7 +20,7 @@ $pageTitle = "Nosotros";
 
   <!-- ¿Qué es una cookie? -->
   <div class="mb-10">
-    <h2 class="text-xl font-bold mb-4">¿Qué es una cookie?</h2>
+    <h2 class="text-xl text-[#1e482a] font-bold mb-4">¿Qué es una cookie?</h2>
     <p class="mb-4">
       Una cookie es un archivo pequeño de letras y números que almacenamos en tu navegador o en el disco duro de tu ordenador, si tú estás de acuerdo. Las cookies contienen información que se transfiere al disco duro de tu dispositivo.
     </p>
@@ -28,7 +28,7 @@ $pageTitle = "Nosotros";
 
   <!-- Tipos de cookies que usamos -->
   <div class="mb-10">
-    <h2 class="text-xl font-bold mb-4">Tipos de cookies que utilizamos</h2>
+    <h2 class="text-xl text-[#1e482a] font-bold mb-4">Tipos de cookies que utilizamos</h2>
     <ul class="list-disc ml-6 space-y-4">
       <li>
         <p>
@@ -45,7 +45,7 @@ $pageTitle = "Nosotros";
 
   <!-- Cómo gestionar cookies -->
     <div class="mb-10">
-        <h2 class="text-xl font-bold mb-4">¿Cómo puedes controlar las cookies?</h2>
+        <h2 class="text-xl text-[#1e482a] font-bold mb-4">¿Cómo puedes controlar las cookies?</h2>
         <p class="mb-4">
         Puedes bloquear las cookies activando la configuración en tu navegador que te permite rechazar la instalación de todas o algunas cookies.
         </p>

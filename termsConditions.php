@@ -21,7 +21,7 @@ $pageTitle = "Nosotros";
 
         <!-- Sección 1 -->
         <div class="mb-10">
-            <h2 class="text-xl font-bold mb-4">1. Uso del sitio web</h2>
+            <h2 class="text-xl font-bold text-[#1e482a] mb-4">1. Uso del sitio web</h2>
             <ul class="list-disc ml-6 space-y-2">
             <li>Ser mayor de 18 años.</li>
             <li>Tener capacidad legal para contratar.</li>
@@ -36,7 +36,7 @@ $pageTitle = "Nosotros";
 
         <!-- Sección 2 -->
         <div class="mb-10">
-            <h2 class="text-xl font-bold mb-4">2. Conducta del usuario y restricciones</h2>
+            <h2 class="text-xl text-[#1e482a] font-bold mb-4">2. Conducta del usuario y restricciones</h2>
             <p class="mb-4">
             El sitio y todos sus contenidos están protegidos por derechos de autor. Está prohibido copiar, reproducir o distribuir cualquier material sin autorización.
             </p>
@@ -54,7 +54,7 @@ $pageTitle = "Nosotros";
 
         <!-- Sección 3 -->
         <div class="mb-10">
-            <h2 class="text-xl font-bold mb-4">3. Privacidad y datos personales</h2>
+            <h2 class="text-xl text-[#1e482a] font-bold mb-4">3. Privacidad y datos personales</h2>
             <p>
                 Su información personal está protegida bajo nuestra <a href="./privacyNotice.php" class="text-[#1e482a] underline hover:bg-[#1e482a]/20 hover:font-semibold">Declaración de Privacidad</a>. Esta puede modificarse ocasionalmente.
             </p>
@@ -62,7 +62,7 @@ $pageTitle = "Nosotros";
 
         <!-- Sección 4 -->
         <div class="mb-10">
-            <h2 class="text-xl font-bold mb-4">4. Registro y seguridad de cuenta</h2>
+            <h2 class="text-xl text-[#1e482a] font-bold mb-4">4. Registro y seguridad de cuenta</h2>
             <p class="mb-2">Al registrarse:</p>
             <ul class="list-disc ml-6 space-y-2">
             <li>Debe proporcionar información veraz.</li>
@@ -73,7 +73,7 @@ $pageTitle = "Nosotros";
 
         <!-- Sección 5 -->
         <div class="mb-10">
-            <h2 class="text-xl font-bold mb-4">5. Prueba, suscripción y cancelación</h2>
+            <h2 class="text-xl text-[#1e482a] font-bold mb-4">5. Prueba, suscripción y cancelación</h2>
             <p class="mb-2">Las pruebas gratuitas solo están disponibles para nuevos usuarios.</p>
             <p class="mb-2">Las suscripciones se renuevan automáticamente hasta su cancelación.</p>
             <p>Los pagos no son reembolsables una vez realizados.</p>
@@ -81,7 +81,7 @@ $pageTitle = "Nosotros";
 
         <!-- Sección 6 -->
         <div class="mb-10">
-            <h2 class="text-xl font-bold mb-4">6. Productos, servicios y precios</h2>
+            <h2 class="text-xl text-[#1e482a] font-bold mb-4">6. Productos, servicios y precios</h2>
             <p>
             Los productos y precios pueden cambiar sin previo aviso. No garantizamos que las descripciones sean 100% precisas. Todas las ventas son finales.
             </p>
@@ -89,7 +89,7 @@ $pageTitle = "Nosotros";
 
         <!-- Sección 7 -->
         <div class="mb-10">
-            <h2 class="text-xl font-bold mb-4">7. Cambios de plan</h2>
+            <h2 class="text-xl text-[#1e482a] font-bold mb-4">7. Cambios de plan</h2>
             <p>
             Las bajadas de plan se aplican en el siguiente período. Las subidas de plan se cobran proporcionalmente.
             </p>
@@ -97,7 +97,7 @@ $pageTitle = "Nosotros";
 
         <!-- Sección 8 -->
         <div class="mb-10">
-            <h2 class="text-xl font-bold mb-4">8. Declaración legal</h2>
+            <h2 class="text-xl text-[#1e482a] font-bold mb-4">8. Declaración legal</h2>
             <p>
             <span class="text-[#1e482a] font-bold">ZimbraTubos&reg;</span> no garantiza resultados específicos. Usted es responsable del uso y de las decisiones relacionadas a su negocio.
             </p>
@@ -105,7 +105,7 @@ $pageTitle = "Nosotros";
 
         <!-- Sección 9 -->
         <div class="mb-10">
-            <h2 class="text-xl font-bold mb-4">9. Responsabilidades legales</h2>
+            <h2 class="text-xl text-[#1e482a] font-bold mb-4">9. Responsabilidades legales</h2>
             <p>
             Usted es responsable de cumplir con todas las leyes aplicables. Debe indemnizar a <span class="text-[#1e482a] font-bold">ZimbraTubos&reg;</span> ante cualquier reclamo relacionado con su uso del servicio.
             </p>
@@ -113,7 +113,7 @@ $pageTitle = "Nosotros";
 
         <!-- Sección 10 -->
         <div class="mb-10">
-            <h2 class="text-xl font-bold mb-4">10. Testimonios y contenido del usuario</h2>
+            <h2 class="text-xl text-[#1e482a] font-bold mb-4">10. Testimonios y contenido del usuario</h2>
             <p>
             Los testimonios pueden ser utilizados por <span class="text-[#1e482a] font-bold">ZimbraTubos&reg;</span> con fines publicitarios. Pueden ser editados por razones de redacción.
             </p>
@@ -121,7 +121,7 @@ $pageTitle = "Nosotros";
 
         <!-- Sección 11 -->
         <div class="mb-10">
-            <h2 class="text-xl font-bold mb-4">11. Limitación de responsabilidad</h2>
+            <h2 class="text-xl text-[#1e482a] font-bold mb-4">11. Limitación de responsabilidad</h2>
             <p>
             <span class="text-[#1e482a] font-bold">ZimbraTubos&reg;</span> no será responsable por daños indirectos o consecuentes derivados del uso del sitio o los servicios.
             </p>
@@ -130,42 +130,42 @@ $pageTitle = "Nosotros";
         <!-- Secciones 12-19 (resumen) -->
         <div class="space-y-6">
             <div>
-            <h2 class="text-xl font-bold mb-2">12. Infracción de copyright</h2>
+            <h2 class="text-xl text-[#1e482a] font-bold mb-2">12. Infracción de copyright</h2>
             <p>Puede enviar notificaciones si cree que su contenido ha sido infringido.</p>
             </div>
 
             <div>
-            <h2 class="text-xl font-bold mb-2">13. Enlaces de terceros</h2>
+            <h2 class="text-xl text-[#1e482a] font-bold mb-2">13. Enlaces de terceros</h2>
             <p>No somos responsables del contenido de sitios externos.</p>
             </div>
 
             <div>
-            <h2 class="text-xl font-bold mb-2">14. Terminación</h2>
+            <h2 class="text-xl text-[#1e482a] font-bold mb-2">14. Terminación</h2>
             <p><span class="text-[#1e482a] font-bold">ZimbraTubos&reg;</span> puede cancelar su cuenta si incumple estos términos.</p>
             </div>
 
             <div>
-            <h2 class="text-xl font-bold mb-2">15. Firma electrónica</h2>
+            <h2 class="text-xl text-[#1e482a] font-bold mb-2">15. Firma electrónica</h2>
             <p>Al usar el sitio, acepta comunicaciones electrónicas como equivalentes legales a las escritas.</p>
             </div>
 
             <div>
-            <h2 class="text-xl font-bold mb-2">16. Cambios al acuerdo</h2>
+            <h2 class="text-xl text-[#1e482a] font-bold mb-2">16. Cambios al acuerdo</h2>
             <p>Podemos modificar estos términos. Es su responsabilidad revisarlos periódicamente.</p>
             </div>
 
             <div>
-            <h2 class="text-xl font-bold mb-2">17. Incidentes de seguridad</h2>
+            <h2 class="text-xl text-[#1e482a] font-bold mb-2">17. Incidentes de seguridad</h2>
             <p>Le notificaremos sobre incidentes de seguridad si es legalmente requerido.</p>
             </div>
 
             <div>
-            <h2 class="text-xl font-bold mb-2">18. Acuerdo completo</h2>
+            <h2 class="text-xl text-[#1e482a] font-bold mb-2">18. Acuerdo completo</h2>
             <p>Estos términos constituyen el acuerdo completo entre usted y <span class="text-[#1e482a] font-bold">ZimbraTubos&reg;</span>.</p>
             </div>
 
             <div>
-            <h2 class="text-xl font-bold mb-2">19. Contacto</h2>
+            <h2 class="text-xl text-[#1e482a] font-bold mb-2">19. Contacto</h2>
             <p>Puede contactarnos a través del chat en el sitio web o por correo electrónico.</p>
             </div>
         </div>
