@@ -12,8 +12,8 @@ include("./includes/header.php");
                     class="slide w-full object-cover hidden" />
                 <img src="./assets/img/banners/banner_dos.png" alt="Imagen 2"
                     class="slide w-full object-cover hidden" />
-                <!-- <img src="https://picsum.photos/id/1018/1920/600" alt="Imagen 3"
-                    class="slide w-full object-cover hidden" /> -->
+                <img src="./assets/img/banners/banner_tres.png" alt="Imagen 3"
+                    class="slide w-full object-cover hidden" />
             </div>
 
             <!-- Controles -->

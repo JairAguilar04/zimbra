@@ -36,7 +36,7 @@
 <body class="min-h-screen flex flex-col bg-gray-200">
 
     <!-- boton de WhatsApp -->
-    <a href="https://wa.me/7224041872?text=Hola%2C%20estoy%20interesado%20en%20sus%20productos." target="_blank"  aria-label="Contáctame por WhatsApp" class="fixed bottom-6 right-6 z-50">
+    <a href="https://wa.me/7224041872?text=Hola%2C%20estoy%20interesado%20en%20sus%20productos." target="_blank"  aria-label="Contáctame por WhatsApp" class="fixed bottom-20 right-6 z-50">
         <div class="relative bg-green-600 p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-200">
             <!-- Ícono de WhatsApp -->
             <svg xmlns="http://www.w3.org/2000/svg" 
@@ -49,6 +49,22 @@
             <span class="absolute top-0 right-0 w-3 h-3 bg-orange-500 rounded-full animate-bounce ring-2 ring-white"></span>
         </div>
     </a>
+
+    <!-- cookies -->
+    <div id="cookieConsent" class="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 transition-opacity duration-300 opacity-0 pointer-events-none">
+        <div class="bg-white border border-gray-300 shadow-lg rounded-lg p-6 w-full max-w-xl mx-4">
+            <h2 class="text-lg font-semibold mb-2">Este sitio utiliza cookies 🍪</h2>
+            <p class="text-sm text-gray-600 mb-4">
+                Utilizamos cookies para mejorar tu experiencia en nuestro sitio. Al continuar navegando, aceptas nuestro
+                <a href="./policyCookies.php" class="text-[#1e482a] underline hover:bg-[#1e482a]/20 hover:font-semibold">uso de cookies</a>.
+            </p>
+            <div class="flex justify-end gap-2">
+                <button id="acceptCookies" class="bg-[#2f767c] hover:bg-[#2f767c]/80 text-white text-sm px-4 py-2 rounded transition">Aceptar</button>
+                <button id="declineCookies" class="bg-gray-200 hover:bg-gray-300 text-sm px-4 py-2 rounded transition">Rechazar</button>
+            </div>
+        </div>
+    </div>
+
 
     <div class="w-full p-2 bg-[#1e482a]">
         <header class="flex sm:justify-start justify-between items-center gap-5">

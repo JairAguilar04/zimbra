@@ -4,9 +4,9 @@
             <!-- Enlaces - orden 2 en mobile, 1 en desktop -->
             <div class="order-2 md:order-1 text-center md:text-left">
                 <ul class="space-y-1">
-                    <li class="hover:text-gray-300 hover:underline"><a href="#">Aviso de privacidad</a></li>
-                    <li class="hover:text-gray-300 hover:underline"><a href="#">Términos y condiciones</a></li>
-                    <li class="hover:text-gray-300 hover:underline"><a href="#">Política de cookies</a></li>
+                    <li class="hover:text-gray-300 hover:underline"><a href="./privacyNotice.php">Aviso de privacidad</a></li>
+                    <li class="hover:text-gray-300 hover:underline"><a href="./termsConditions.php">Términos y condiciones</a></li>
+                    <li class="hover:text-gray-300 hover:underline"><a href="./policyCookies.php">Política de cookies</a></li>
                     <!-- <li class="hover:text-gray-300 hover:underline">
                     <a href="https://zimbratubos.com/admin/" target="_blank">Powered by Hubbdi 2.0.0.28</a>
                     </li> -->
@@ -179,6 +179,50 @@ const menuToggle = document.getElementById('menu-toggle');
         galeria.classList.toggle('hidden');
         boton.textContent = galeria.classList.contains('hidden') ? "Ver más" : "Ocultar";
     }
+
+
+
+
+    <!-- Script para manejar el consentimiento -->
+  document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('cookieConsent');
+    const acceptBtn = document.getElementById('acceptCookies');
+    const declineBtn = document.getElementById('declineCookies');
+
+    const cookieName = 'zimbratubos_cookie_consent';
+
+    const setCookie = (value) => {
+      const d = new Date();
+      d.setTime(d.getTime() + (365*24*60*60*1000)); // 1 año
+      document.cookie = `${cookieName}=${value}; expires=${d.toUTCString()}; path=/`;
+    };
+
+    const getCookie = () => {
+      const nameEQ = cookieName + "=";
+      const ca = document.cookie.split(';');
+      for(let i=0; i < ca.length; i++) {
+        let c = ca[i].trim();
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    };
+
+    if (!getCookie()) {
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+    }
+
+    acceptBtn.addEventListener('click', () => {
+      setCookie('accepted');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+    });
+
+    declineBtn.addEventListener('click', () => {
+      setCookie('declined');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+    });
+  });
+
+
 
 </script>
 </html>
