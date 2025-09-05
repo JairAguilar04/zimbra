@@ -91,7 +91,6 @@
         { diametro: 80, largo: 3.00 },
         { diametro: 90, largo: 3.00 },
         { diametro: 100, largo: 3.00 },
-        { diametro: 110, largo: 3.00 },
         { diametro: 120, largo: 3.00 },
     ];
 
@@ -101,11 +100,12 @@
 
         medidas.forEach((medida, index) => {
             const fila = document.createElement('tr');
-            fila.classList.add('hover:bg-gray-300');
+            fila.classList.add('hover:bg-gray-200');
 
             fila.innerHTML = `
           <td class="border-b border-gray-300 text-sm">${medida.diametro}</td>
           <td class="border-b border-gray-300 text-sm">${medida.largo}.00</td>
+          <td class="border-b border-gray-300"> <img src="./assets/img/iconos/pdf.png" alt="pdf" class="w-5 mx-auto py-1 transform duration-300 hover:-translate-y-1"> </td>
         `;
 
             cuerpoTabla.appendChild(fila);
@@ -177,7 +177,7 @@ const menuToggle = document.getElementById('menu-toggle');
         }
 
         galeria.classList.toggle('hidden');
-        boton.textContent = galeria.classList.contains('hidden') ? "Ver más" : "Ocultar";
+        boton.textContent = galeria.classList.contains('hidden') ? "Galería de instalación y usos" : "Ocultar";
     }
 
 

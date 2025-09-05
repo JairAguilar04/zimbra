@@ -47,7 +47,7 @@
     </div>
 
     <div class="text-center">
-        <button type="button" class="w-auto bg-[#2f767c] rounded-md text-white text-xl font-bold px-4 py-2 transform duration-300 hover:bg-[#2f767c]/80 hover:-translate-y-1" id="button-galeria" onClick="viewGaleria()">Ver más</button>
+        <button type="button" class="w-auto bg-[#2f767c] rounded-md text-white text-xl font-bold px-4 py-2 transform duration-300 hover:bg-[#2f767c]/80 hover:-translate-y-1" id="button-galeria" onClick="viewGaleria()">Galería de instalación y usos</button>
     </div>
 
     <div class="my-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 h-96 overflow-y-auto hidden" id="galeria">

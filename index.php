@@ -36,7 +36,7 @@ include("./includes/header.php");
             <div class="flex sm:flex-row flex-col items-center gap-x-5 sm:px-20 px-2 mt-5">
                 <div class="flex-1">
                     <p class="text-justify my-5">
-                        En <span class="text-[#1e482a] font-bold">ZimbraTubos&reg;</span> ofrecemos soluciones prácticas para columnas de concreto. Nuestra cimbra de cartón es resistente, fácil de usar y te ayuda a avanzar tu obra más rápido, logrando resultados profesionales sin complicaciones.
+                        En <span class="text-[#1e482a] font-bold">ZimbraTubos&reg;</span> ofrecemos soluciones prácticas para columnas redondas de concreto. Nuestra cimbra de cartón es resistente, fácil de usar y te ayuda a avanzar tu obra más rápido, logrando resultados profesionales sin complicaciones.
                     </p>
                     <p class="text-justify">
                         Ligera y manejable, optimiza tu tiempo y recursos en cada proyecto. Haz que tu construcción sea más sencilla y eficiente con <span class="text-[#1e482a] font-bold">ZimbraTubos&reg;</span>.
@@ -62,8 +62,9 @@ include("./includes/header.php");
                 <table class="mx-auto sm:w-96 w-3/4 divide-y divide-gray-200 shadow-md rounded-lg overflow-hidden">
                     <thead class="bg-[#f78910] text-white">
                         <tr>
-                            <th>Diametro (cm)</th>
+                            <th>Diámetro (cm)</th>
                             <th>Largo (m)</th>
+                            <th>Guía técnica</th>
                         </tr>
                     </thead>
                     <tbody class="text-center" id="cuerpo-tabla">
@@ -105,8 +106,8 @@ include("./includes/header.php");
                     <img src="./assets/img/iconos/envio.png" alt="Icono envio" class="w-14 sm:w-20">
                 </div>
                 <div>
-                    <h3 class="text-[#2f767c] sm:text-lg text-base font-bold mb-1">Envío a todo el país</h3>
-                    <p class="text-sm text-gray-600">Contamos con envío a todo el país, seguro y confiable.</p>
+                    <h3 class="text-[#2f767c] sm:text-lg text-base font-bold mb-1">Envío confiable y seguro</h3>
+                    <p class="text-sm text-gray-600">Sujeto a rutas disponibles y cotización de flete.</p>
                 </div>
             </div>
 
@@ -122,13 +123,6 @@ include("./includes/header.php");
             </div>
         </div>
     </section>
-
-
-
-
-
-
-
 
     <?php
         include("./includes/footer.php");

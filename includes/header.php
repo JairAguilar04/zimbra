@@ -34,21 +34,125 @@
 </head>
 
 <body class="min-h-screen flex flex-col bg-gray-200">
-
-    <!-- boton de WhatsApp -->
-    <a href="https://wa.me/7224041872?text=Hola%2C%20estoy%20interesado%20en%20sus%20productos." target="_blank"  aria-label="Contáctame por WhatsApp" class="fixed bottom-20 right-6 z-50">
-        <div class="relative bg-green-600 p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-200">
-            <!-- Ícono de WhatsApp -->
-            <svg xmlns="http://www.w3.org/2000/svg" 
-                class="w-6 h-6 text-white" 
-                fill="currentColor" 
-                viewBox="0 0 24 24">
-                <path d="M12.04 2C6.51 2 2 6.49 2 12c0 1.93.49 3.76 1.43 5.38L2 22l4.77-1.25A10.05 10.05 0 0 0 12.04 22C17.56 22 22 17.51 22 12S17.56 2 12.04 2zm0 18.32c-1.6 0-3.17-.42-4.56-1.21l-.33-.2-2.83.74.76-2.75-.21-.35A8.05 8.05 0 0 1 4 12c0-4.41 3.63-8 8.04-8C16.43 4 20 7.59 20 12s-3.57 8.32-7.96 8.32zm4.37-5.89c-.24-.12-1.42-.7-1.64-.77-.22-.08-.38-.12-.54.13s-.62.77-.76.93c-.14.15-.28.17-.52.06a6.56 6.56 0 0 1-1.93-1.19 7.2 7.2 0 0 1-1.34-1.66c-.14-.24 0-.38.11-.5.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.75-1.78-.2-.48-.4-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2 0 1.18.86 2.32.98 2.48.12.16 1.69 2.57 4.1 3.6.57.24 1.01.38 1.36.49.57.18 1.08.16 1.48.1.45-.06 1.42-.58 1.62-1.14.2-.56.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28z"/>
+    <!-- Contenedor del FAB -->
+    <div id="fab-container" class="fixed bottom-40 right-6 z-50 flex flex-col items-end space-y-3">
+        <!-- Botón de WhatsApp -->
+        <a href="https://wa.me/7224041872?text=Hola%2C%20estoy%20interesado%20en%20sus%20productos."
+            target="_blank"
+            aria-label="Contáctame por WhatsApp"
+            class="bg-green-600 p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-200 relative">
+            <!-- Ícono -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.04 2C6.51 2 2 6.49 2 12c0 1.93.49 3.76 1.43 5.38L2 22l4.77-1.25A10.05 10.05 0 0 0 12.04 22C17.56 22 22 17.51 22 12S17.56 2 12.04 2zm0 18.32c-1.6 0-3.17-.42-4.56-1.21l-.33-.2-2.83.74.76-2.75-.21-.35A8.05 8.05 0 0 1 4 12c0-4.41 3.63-8 8.04-8C16.43 4 20 7.59 20 12s-3.57 8.32-7.96 8.32zm4.37-5.89c-.24-.12-1.42-.7-1.64-.77-.22-.08-.38-.12-.54.13s-.62.77-.76.93c-.14.15-.28.17-.52.06a6.56 6.56 0 0 1-1.93-1.19 7.2 7.2 0 0 1-1.34-1.66c-.14-.24 0-.38.11-.5.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.75-1.78-.2-.48-.4-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2 0 1.18.86 2.32.98 2.48.12.16 1.69 2.57 4.1 3.6.57.24 1.01.38 1.36.49.57.18 1.08.16 1.48.1.45-.06 1.42-.58 1.62-1.14.2-.56.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28z" />
             </svg>
-            <!-- Circulito naranja animado -->
+            <!-- Circulito animado -->
             <span class="absolute top-0 right-0 w-3 h-3 bg-orange-500 rounded-full animate-bounce ring-2 ring-white"></span>
+        </a>
+
+        <!-- Botón para abrir el modal -->
+        <button onclick="openModal()"
+            class="bg-blue-600 p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 10h.01M12 10h.01M16 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Botón de toggle para mostrar/ocultar -->
+    <button onclick="toggleFab()" class="fixed bottom-24 right-6 z-50 bg-[#f78910] text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform duration-200">
+        <svg id="toggle-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path id="toggle-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+
+    <!-- Modal oculto -->
+    <div id="modal"
+        class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden transition-opacity duration-300">
+        <div id="modal-content" class="bg-white p-6 rounded-lg w-full max-w-xl transform scale-95 opacity-0 transition-all duration-300">
+            <h2 class="sm:text-2xl text-xl text-[#1e482a] font-bold mb-4">Formulario de contacto</h2>
+            <form id="contact-form" onsubmit="submitForm(event)">
+                <input type="text" id="name" placeholder="Nombre" class="w-full p-2 border mb-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                <input type="email" id="email" placeholder="Correo" class="w-full p-2 border mb-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                <textarea id="message" placeholder="Mensaje" class="w-full p-2 border mb-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                <div class="flex justify-end space-x-2">
+                    <button type="button" onclick="closeModal()" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Cancelar</button>
+                    <button type="submit" class="bg-[#2f767c] hover:bg-[#2f767c]/80 text-white px-4 py-2 rounded">Enviar</button>
+                </div>
+                <p id="form-error" class="text-red-500 text-sm mt-2 hidden">Por favor completa todos los campos.</p>
+            </form>
         </div>
-    </a>
+    </div>
+
+    <!-- script boton whatshapp y modal -->
+    <script>
+        let fabOpen = true;
+
+        function toggleFab() {
+            const fab = document.getElementById('fab-container');
+            const path = document.getElementById('toggle-path');
+
+            fabOpen = !fabOpen;
+
+            if (fabOpen) {
+                fab.classList.remove('hidden');
+                path.setAttribute("d", "M6 18L18 6M6 6l12 12"); // Ícono X
+            } else {
+                fab.classList.add('hidden');
+                path.setAttribute("d", "M12 4v16m8-8H4"); // Ícono +
+            }
+        }
+
+        function openModal() {
+            const modal = document.getElementById('modal');
+            const modalContent = document.getElementById('modal-content');
+
+            modal.classList.remove('hidden');
+            // Mostrar con animación
+            setTimeout(() => {
+            modalContent.classList.remove('scale-95', 'opacity-0');
+            modalContent.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            const modalContent = document.getElementById('modal-content');
+
+            // Ocultar con animación
+            modalContent.classList.remove('scale-100', 'opacity-100');
+            modalContent.classList.add('scale-95', 'opacity-0');
+
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const error = document.getElementById('form-error');
+
+            if (!name || !email || !message) {
+                error.classList.remove('hidden');
+                return;
+            }
+
+            error.classList.add('hidden');
+
+            // Aquí puedes manejar el envío real, como un fetch()
+
+            alert("Formulario enviado. ¡Gracias!");
+            closeModal();
+            document.getElementById('contact-form').reset();
+        }
+    </script>
 
     <!-- cookies -->
     <div id="cookieConsent" class="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 transition-opacity duration-300 opacity-0 pointer-events-none">
