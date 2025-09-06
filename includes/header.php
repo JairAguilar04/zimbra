@@ -72,13 +72,78 @@
     <!-- Modal oculto -->
     <div id="modal"
         class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden transition-opacity duration-300">
-        <div id="modal-content" class="bg-white p-6 rounded-lg w-full max-w-xl transform scale-95 opacity-0 transition-all duration-300">
-            <h2 class="sm:text-2xl text-xl text-[#1e482a] font-bold mb-4">Formulario de contacto</h2>
+        <div id="modal-content" class="bg-white p-6 rounded-lg w-full max-w-2xl transform scale-95 opacity-0 transition-all duration-300">
+            <h2 class="sm:text-2xl text-xl text-[#1e482a] font-bold mb-4">Formulario de cotización</h2>
             <form id="contact-form" onsubmit="submitForm(event)">
-                <input type="text" id="name" placeholder="Nombre" class="w-full p-2 border mb-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                <input type="email" id="email" placeholder="Correo" class="w-full p-2 border mb-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                <textarea id="message" placeholder="Mensaje" class="w-full p-2 border mb-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                <div class="flex justify-end space-x-2">
+                <!-- datos de contacto -->
+                 <div class="relative flex items-center justify-center my-8">
+                    <hr class="border-2 border-[#f78910] rounded-md w-full">
+                    <h2 class="absolute bg-white px-4 text-lg font-semibold text-[#f78910]">Datos de contacto</h2>
+                </div>
+                <div class="flex flex-col gap-y-5">
+                    <!-- nombre del cliente y de la empresa -->
+                    <div class="flex sm:flex-row flex-col gap-5 w-full">
+                        <div class="flex-1">
+                            <label for="name" class="block mb-2 text-[#2f767c] font-bold">
+                                Nombre del cliente<span class="font-bold text-red-600">*</span>
+                            </label>
+                            <input type="text" name="name" id="name" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Nombre del cliente" autofocus />
+                        </div>
+                        <div class="flex-1">
+                            <label for="name" class="block mb-2 text-[#2f767c] font-bold">
+                                Nombre de la empresa/negocio<span class="font-bold text-red-600">*</span>
+                            </label>
+                            <input type="text" name="name" id="name" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Nombre de la empresa o negocio" />
+                        </div>
+                    </div>
+                    <!-- telefono y estado -->
+                    <div class="flex sm:flex-row flex-col flex-row w-full gap-5">
+                        <!-- telefono -->
+                        <div class="basis-1/4">
+                            <label for="telefono" class="block mb-2 text-[#2f767c] font-bold">
+                                Teléfono<span class="font-bold text-red-600">*</span>
+                            </label>
+                            <input type="text" name="telefono" id="telefono" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Teléfono" />
+                        </div>
+                        <!-- estado -->
+                        <div class="basis-3/4">
+                            <label for="estado" class="block mb-2 text-[#2f767c] font-bold">
+                                Estado<span class="font-bold text-red-600">*</span>
+                            </label>
+                            <select class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" id="estado" name="estado">
+                                <option value="mexico">México</option>
+                                <option value="mexico">CDMX</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- municipio y localidad -->
+                     <div class="flex sm:flex-row flex-col gap-5">
+                        <!-- municipio -->
+                         <div class="flex-1">
+                            <label for="municipio" class="block mb-2 text-[#2f767c] font-bold">
+                                Munincipio<span class="font-bold text-red-600">*</span>
+                            </label>
+                            <input type="text" name="municipio" id="municipio" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Municipio" />
+                         </div>
+                        <!-- localidad -->
+                        <div class="flex-1">
+                            <label for="localidad" class="block mb-2 text-[#2f767c] font-bold">
+                                Localidad<span class="font-bold text-red-600">*</span>
+                            </label>
+                            <input type="text" name="localidad" id="localidad" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Localidad" />
+                        </div>
+                     </div>
+                </div>
+
+                <!-- pedidos -->
+                <div class="relative flex items-center justify-center my-8">
+                    <hr class="border-2 border-[#f78910] rounded-md w-full">
+                    <h2 class="absolute bg-white px-4 text-lg font-semibold text-[#f78910]">Pedido</h2>
+                </div>
+
+
+
+                <div class="flex justify-end space-x-2 mt-5">
                     <button type="button" onclick="closeModal()" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Cancelar</button>
                     <button type="submit" class="bg-[#2f767c] hover:bg-[#2f767c]/80 text-white px-4 py-2 rounded">Enviar</button>
                 </div>
