@@ -71,7 +71,7 @@
 
     <!-- Modal oculto -->
     <div id="modal"
-        class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden transition-opacity duration-300">
+        class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden transition-opacity duration-300 overflow-y-scroll">
         <div id="modal-content" class="bg-white p-6 rounded-lg w-full max-w-2xl transform scale-95 opacity-0 transition-all duration-300">
             <h2 class="sm:text-2xl text-xl text-[#1e482a] font-bold mb-4">Formulario de cotización</h2>
             <form id="contact-form" onsubmit="submitForm(event)">
@@ -112,7 +112,7 @@
                             </label>
                             <select class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" id="estado" name="estado">
                                 <option value="mexico">México</option>
-                                <option value="mexico">CDMX</option>
+                                <option value="cdmx">CDMX</option>
                             </select>
                         </div>
                     </div>
@@ -139,6 +139,35 @@
                 <div class="relative flex items-center justify-center my-8">
                     <hr class="border-2 border-[#f78910] rounded-md w-full">
                     <h2 class="absolute bg-white px-4 text-lg font-semibold text-[#f78910]">Pedido</h2>
+                </div>
+
+
+                <div class="flex sm:flex-row flex-col gap-5">
+                    <!-- cargar lista para mostrar -->
+                    <div class="flex-1">
+                        <span class="block mb-2 text-[#2f767c] font-bold">
+                            Medidas<span class="font-bold text-red-600">*</span>
+                        </span>
+                        <div class="w-full h-10 text-gray-700 rounded-md rounded-b-none bg-gray-200 px-2 py-2 outline-none cursor-pointer" id="btn-view-list" onclick="viewList()">
+                            Seleccione las medidas de su interés
+                        </div>
+                        <div class="w-full text-gray-700 rounded-md rounded-t-none bg-gray-200 px-2 py-3 outline-none hidden" id="view-list">
+                            <!-- recorremos la lista desde JS -->
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <span class="block mb-2 text-[#2f767c] font-bold">
+                            Ingresa la cantidad que requieres por cada medida
+                        </span>
+                        <ul id="lista-pedidos-input" class="mt-5">
+                            <!-- <li class="flex items-end space-x-2">
+                                <span class="block text-gray-700 font-semibold basis-1/4">
+                                    120 cm<span class="font-bold text-red-600">*</span>
+                                </span>
+                                <input type="number" name="" id="" class="basis-3/4 w-full h-10 text-gray-700 border-b-2 border-[#2f767c] px-2 outline-none" min="0" />
+                            </li> -->
+                        </ul>
+                    </div>
                 </div>
 
 
