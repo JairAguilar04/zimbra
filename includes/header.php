@@ -268,7 +268,7 @@
         <header class="flex sm:justify-start justify-between items-center gap-5">
             <!-- logotipo -->
             <div class="w-20 sm:ml-20 ml-2">
-                <a href="./">
+                <a href="./index">
                     <img src="./assets/img/logo_white.png" alt="Logo" class="sm:w-20 w-10">
                 </a>
             </div>
@@ -278,22 +278,22 @@
                     <li
                         class="w-auto h-8 px-2 text-center bg-transparent hover:bg-[#1e482a] hover:text-white transform duration-300 hover:-translate-y-1
                         <?php echo $currentPage === 'index.php' ? 'border-b-4 border-white pb-8' : ''; ?>">
-                        <a href="./">Inicio</a>
+                        <a href="./index">Inicio</a>
                     </li>
                     <li
                         class="w-auto h-8 px-2 text-center bg-transparent hover:bg-[#1e482a] hover:text-white transform duration-300 hover:-translate-y-1
                         <?php echo $currentPage === 'contact.php' ? 'border-b-4 border-white pb-8' : ''; ?>">
-                        <a href="./contact.php">Contacto</a>
+                        <a href="./contact">Contacto</a>
                     </li>
                     <li
                         class="w-auto h-8 px-2 text-center bg-transparent hover:bg-[#1e482a] hover:text-white transform duration-300 hover:-translate-y-1
                         <?php echo $currentPage === 'about.php' ? 'border-b-4 border-white pb-8' : ''; ?>">
-                        <a href="./about.php">Nosotros</a>
+                        <a href="./about-us">Nosotros</a>
                     </li>
                     <li
                         class="w-auto h-8 px-2 text-center bg-transparent hover:bg-[#1e482a] hover:text-white transform duration-300 hover:-translate-y-1
-                        <?php echo $currentPage === 'asFunction.php' ? 'border-b-4 border-white pb-8' : ''; ?>">
-                        <a href="./asFunction.php">Cómo funciona</a>
+                        <?php echo $currentPage === 'function.php' ? 'border-b-4 border-white pb-8' : ''; ?>">
+                        <a href="./function">Cómo funciona</a>
                     </li>
                 </ul>
             </div>
@@ -322,29 +322,29 @@
                     <ul class="p-2 space-y-4">
                         <!-- home -->
                         <li>
-                            <a href="./index.php" class="block text-gray-800 px-2 py-1 hover:border-b-4 hover:border-gray-200 hover:font-semibold transform duration-300 hover:-translate-y-1
+                            <a href="./index" class="block text-gray-800 px-2 py-1 hover:border-b-4 hover:border-gray-200 hover:font-semibold transform duration-300 hover:-translate-y-1
                             <?php echo $currentPage === 'index.php' ? 'border-b-4 border-gray-400' : ''; ?>">
                                 Home
                             </a>
                         </li>
                         <!-- contact -->
                         <li>
-                            <a href="./contact.php" class="block text-gray-800 px-2 py-1 hover:border-b-4 hover:border-gray-200 hover:font-semibold transform duration-300 hover:-translate-y-1
+                            <a href="./contact" class="block text-gray-800 px-2 py-1 hover:border-b-4 hover:border-gray-200 hover:font-semibold transform duration-300 hover:-translate-y-1
                             <?php echo $currentPage === 'contact.php' ? 'border-b-4 border-gray-400' : ''; ?>">
                                 Contacto
                             </a>
                         </li>
                         <!-- about -->
                         <li>
-                            <a href="./about.php" class="block text-gray-800 px-2 py-1 hover:border-b-4 hover:border-gray-200 hover:font-semibold transform duration-300 hover:-translate-y-1
+                            <a href="./about-us" class="block text-gray-800 px-2 py-1 hover:border-b-4 hover:border-gray-200 hover:font-semibold transform duration-300 hover:-translate-y-1
                             <?php echo $currentPage === 'about.php' ? 'border-b-4 border-gray-400' : ''; ?>">
                             Nosotros
                             </a>
                         </li>
                         <!-- asFunction -->
                         <li>
-                            <a href="./asFunction.php" class="block text-gray-800 px-2 py-1 hover:border-b-4 hover:border-gray-200 hover:font-semibold transform duration-300 hover:-translate-y-1
-                            <?php echo $currentPage === 'asFunction.php' ? 'border-b-4 border-gray-400' : ''; ?>">
+                            <a href="./function" class="block text-gray-800 px-2 py-1 hover:border-b-4 hover:border-gray-200 hover:font-semibold transform duration-300 hover:-translate-y-1
+                            <?php echo $currentPage === 'function.php' ? 'border-b-4 border-gray-400' : ''; ?>">
                                 Cómo funciona
                             </a>
                         </li>

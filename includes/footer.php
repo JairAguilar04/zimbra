@@ -4,9 +4,9 @@
             <!-- Enlaces - orden 2 en mobile, 1 en desktop -->
             <div class="order-2 md:order-1 text-center md:text-left">
                 <ul class="space-y-1">
-                    <li class="hover:text-gray-300 hover:underline"><a href="./privacyNotice.php">Aviso de privacidad</a></li>
-                    <li class="hover:text-gray-300 hover:underline"><a href="./termsConditions.php">Términos y condiciones</a></li>
-                    <li class="hover:text-gray-300 hover:underline"><a href="./policyCookies.php">Política de cookies</a></li>
+                    <li class="hover:text-gray-300 hover:underline"><a href="./privacy-notice">Aviso de privacidad</a></li>
+                    <li class="hover:text-gray-300 hover:underline"><a href="./terms-conditions">Términos y condiciones</a></li>
+                    <li class="hover:text-gray-300 hover:underline"><a href="./policy-cookies">Política de cookies</a></li>
                     <!-- <li class="hover:text-gray-300 hover:underline">
                     <a href="https://zimbratubos.com/admin/" target="_blank">Powered by Hubbdi 2.0.0.28</a>
                     </li> -->
