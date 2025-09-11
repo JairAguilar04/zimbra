@@ -238,3 +238,61 @@ function addPedido(medida){
       listaPedido.appendChild(li);
     });
 }
+
+function validarFormularioContact(){
+  const nombre = document.querySelector('#nameContact').value.trim();
+  const mensajeNombre = document.querySelector('#errorName');
+
+  const email = document.querySelector('#emailContact').value.trim();
+  const mensajeEmail = document.querySelector('#errorEmail');
+
+  const telefono = document.querySelector('#phoneContact').value.trim();
+  const asunto = document.querySelector('#affairContact').value.trim();
+  const mensaje = document.querySelector('#messageContact').value.trim();
+
+  const validacionNombre = /^[A-Za-zÁÉÍÓÚáéíóúÑñüÜ\s'-]+$/u;
+  const regexEmail = /^[^@]+@[^@]+\.[^@]+$/;
+  const regexTelefono = /^\d+$/;
+
+    // validaciones para el nombre
+    if (!nombre) {
+      mensajeNombre.classList.remove('hidden');
+      mensajeNombre.textContent = "El nombre es requerido.";
+      return false;
+    } else if (nombre.length > 60) {
+      mensajeNombre.classList.remove('hidden');
+      mensajeNombre.textContent = "El nombre es demasiado largo.";
+      return false;
+    } else if (!validacionNombre.test(nombre)) {
+      mensajeNombre.classList.remove('hidden');
+      mensajeNombre.textContent = "El nombre no tiene un formato válido.";
+      return false;
+    } else {
+      mensajeNombre.classList.add('hidden');
+      mensajeNombre.textContent = "";
+    }
+
+    // validadcion para el email
+    if(!email){
+      mensajeEmail.classList.remove('hidden');
+      mensajeEmail.textContent = "El correo electrónico es requerido.";
+      return false;
+    }else if(email.length > 80){
+      mensajeEmail.classList.remove('hidden');
+      mensajeEmail.textContent = "El correo electrónico es demasiado largo.";
+      return false;
+    }else if(!regexEmail.test(email)){
+      mensajeEmail.classList.remove('hidden');
+      mensajeEmail.textContent = "El correo electrónico no tiene un formato valido.";
+      return false;
+    }else{
+      mensajeEmail.classList.add('hidden');
+      mensajeEmail.textContent = "";
+    }
+
+
+  console.log("enviado...");
+  return true;
+
+  
+}

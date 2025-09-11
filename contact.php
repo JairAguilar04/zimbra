@@ -16,14 +16,15 @@ $pageTitle = "Contacto";
           </h3>
           <!-- formulario -->
             <div class="flex-1">
-              <form action="#">
+              <form action="#" id="formularioContact" onsubmit="return validarFormularioContact()">
                 <div class="flex flex-col gap-y-5 mt-8">
                   <!-- name -->
                   <div>
                     <label for="name" class="block mb-2 text-[#2f767c] font-bold">
                       Nombre<span class="font-bold text-red-600">*</span>
                     </label>
-                    <input type="text" name="name" id="name" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Nombre o empresa" autofocus />
+                    <input type="text" name="name" id="nameContact" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Nombre o empresa" autofocus />
+                    <span class="text-red-600 text-sm hidden" id="errorName"></span>
                   </div>
 
                   <!-- email y phone -->
@@ -33,14 +34,16 @@ $pageTitle = "Contacto";
                       <label for="email" class="block mb-2 text-[#2f767c] font-bold">
                           Correo electrónico<span class="font-bold text-red-600">*</span>
                       </label>
-                      <input type="email" name="email" id="email" class="w-full h-10 text-gray-700 rounded-md px-2 bg-gray-200 outline-none" placeholder="Correo electrónico"/>
+                      <input type="email" name="email" id="emailContact" class="w-full h-10 text-gray-700 rounded-md px-2 bg-gray-200 outline-none" placeholder="Correo electrónico"/>
+                      <span class="text-red-600 text-sm hidden" id="errorEmail"></span>
                     </div>
                     <!-- phone -->
                     <div class="md:w-2/5 w-full sm:mt-0 mt-5">
                       <label for="phone" class="block mb-2 text-[#2f767c] font-bold">
                           Teléfono<span class="font-bold text-red-600">*</span>
                       </label>
-                      <input type="phone" name="phone" id="phone" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Teléfono"/>
+                      <input type="phone" name="phone" id="phoneContact" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Teléfono"/>
+                      <span class="text-red-600 text-sm hidden" id="errorPhone"></span>
                     </div>
                   </div>
                   <!-- affair -->
@@ -48,14 +51,16 @@ $pageTitle = "Contacto";
                     <label for="affair" class="block mb-2 text-[#2f767c] font-bold">
                       Asunto<span class="font-bold text-red-600">*</span>
                     </label>
-                    <input type="text" name="affair" id="affair" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Asunto"/>
+                    <input type="text" name="affair" id="affairContact" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Asunto"/>
+                    <span class="text-red-600 text-sm hidden" id="errorAffair"></span>
                   </div>
                   <!-- message -->
                   <div>
                     <label for="message" class="block mb-2 text-[#2f767c] font-bold">
                       Mensaje<span class="font-bold text-red-600">*</span>
                     </label>
-                    <textarea name="message" id="message" cols="20" rows="4" class="w-full text-gray-700 pl-2 rounded-md bg-gray-200 outline-none" placeholder="Mensaje..."></textarea>
+                    <textarea name="message" id="messageContact" cols="20" rows="4" class="w-full text-gray-700 pl-2 rounded-md bg-gray-200 outline-none" placeholder="Mensaje..."></textarea>
+                    <span class="text-red-600 text-sm hidden" id="errorMessage"></span>
                   </div>
                 </div>
                 <!-- button -->

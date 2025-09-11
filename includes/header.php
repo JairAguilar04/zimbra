@@ -51,12 +51,13 @@
 
         <!-- Botón para abrir el modal -->
         <button onclick="openModal()"
-            class="bg-blue-600 p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-200">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none"
+            class="bg-[#2f767c] p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-200">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none"
                 viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M8 10h.01M12 10h.01M16 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
+            </svg> -->
+            <img src="./assets/img/iconos/icono_1.png" alt="Pedidos" class="w-6">
         </button>
     </div>
 
@@ -287,7 +288,7 @@
                     </li>
                     <li
                         class="w-auto h-8 px-2 text-center bg-transparent hover:bg-[#1e482a] hover:text-white transform duration-300 hover:-translate-y-1
-                        <?php echo $currentPage === 'about.php' ? 'border-b-4 border-white pb-8' : ''; ?>">
+                        <?php echo $currentPage === 'about-us.php' ? 'border-b-4 border-white pb-8' : ''; ?>">
                         <a href="./about-us">Nosotros</a>
                     </li>
                     <li
@@ -337,8 +338,8 @@
                         <!-- about -->
                         <li>
                             <a href="./about-us" class="block text-gray-800 px-2 py-1 hover:border-b-4 hover:border-gray-200 hover:font-semibold transform duration-300 hover:-translate-y-1
-                            <?php echo $currentPage === 'about.php' ? 'border-b-4 border-gray-400' : ''; ?>">
-                            Nosotros
+                            <?php echo $currentPage === 'about-us.php' ? 'border-b-4 border-gray-400' : ''; ?>">
+                                Nosotros
                             </a>
                         </li>
                         <!-- asFunction -->
