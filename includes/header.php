@@ -57,7 +57,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M8 10h.01M12 10h.01M16 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg> -->
-            <img src="./assets/img/iconos/icono_1.png" alt="Pedidos" class="w-6">
+            <img src="./assets/img/iconos/pedidos.png" alt="Pedidos" class="w-6">
         </button>
     </div>
 

@@ -239,60 +239,134 @@ function addPedido(medida){
     });
 }
 
-function validarFormularioContact(){
-  const nombre = document.querySelector('#nameContact').value.trim();
-  const mensajeNombre = document.querySelector('#errorName');
+document.addEventListener('DOMContentLoaded', () => {
+    const campos = {
+      nameContact: {
+        regex: /^[A-Za-zÁÉÍÓÚáéíóúÑñüÜ\s'-]+$/u,
+        maxLength: 60,
+        requiredMessage: 'El nombre es requerido.',
+        formatMessage: 'El nombre no tiene un formato válido.',
+        lengthMessage: 'El nombre es demasiado largo.',
+      },
+      emailContact: {
+        regex: /^[^@]+@[^@]+\.[^@]+$/,
+        maxLength: 80,
+        requiredMessage: 'El correo electrónico es requerido.',
+        formatMessage: 'El correo electrónico no tiene un formato válido.',
+        lengthMessage: 'El correo electrónico es demasiado largo.',
+      },
+      phoneContact: {
+        regex: /^\d{10}$/,
+        requiredMessage: 'El teléfono es requerido.',
+        formatMessage: 'El teléfono debe tener solo números y 10 dígitos.',
+      },
+      affairContact: {
+        maxLength: 100,
+        requiredMessage: 'El asunto es requerido.',
+        lengthMessage: 'El asunto es demasiado largo.',
+      },
+      messageContact: {
+        maxLength: 500,
+        requiredMessage: 'El mensaje es requerido.',
+        lengthMessage: 'El mensaje es demasiado largo.',
+      }
+    };
 
-  const email = document.querySelector('#emailContact').value.trim();
-  const mensajeEmail = document.querySelector('#errorEmail');
+    // Asignar eventos de input para validación en tiempo real
+    Object.keys(campos).forEach(id => {
+      const input = document.querySelector(`#${id}`);
+      const config = campos[id];
 
-  const telefono = document.querySelector('#phoneContact').value.trim();
-  const asunto = document.querySelector('#affairContact').value.trim();
-  const mensaje = document.querySelector('#messageContact').value.trim();
+      if (input) {
+        input.addEventListener('input', () => {
+          validarCampo(input, config);
+        });
+      }
+    });
+  });
 
-  const validacionNombre = /^[A-Za-zÁÉÍÓÚáéíóúÑñüÜ\s'-]+$/u;
-  const regexEmail = /^[^@]+@[^@]+\.[^@]+$/;
-  const regexTelefono = /^\d+$/;
+  function validarCampo(input, config) {
+    const value = input.value.trim();
+    //Quita lo de Contact, la primer letra la convierte en mayuscula
+    const convPalabra = input.id.charAt(0).toUpperCase() + input.id.slice(1).replace('Contact', '');
+    const errorElement = document.getElementById(`error${convPalabra}`);
 
-    // validaciones para el nombre
-    if (!nombre) {
-      mensajeNombre.classList.remove('hidden');
-      mensajeNombre.textContent = "El nombre es requerido.";
-      return false;
-    } else if (nombre.length > 60) {
-      mensajeNombre.classList.remove('hidden');
-      mensajeNombre.textContent = "El nombre es demasiado largo.";
-      return false;
-    } else if (!validacionNombre.test(nombre)) {
-      mensajeNombre.classList.remove('hidden');
-      mensajeNombre.textContent = "El nombre no tiene un formato válido.";
+    let errorMessage = '';
+
+    if (!value) {
+      errorMessage = config.requiredMessage;
+    } else if (config.maxLength && value.length > config.maxLength) {
+      errorMessage = config.lengthMessage;
+    } else if (config.regex && !config.regex.test(value)) {
+      errorMessage = config.formatMessage;
+    }
+
+    if (errorMessage) {
+      input.classList.add('border-2', 'border-red-600');
+      input.classList.remove('border-green-600');
+      errorElement.textContent = errorMessage;
+      errorElement.classList.remove('hidden');
       return false;
     } else {
-      mensajeNombre.classList.add('hidden');
-      mensajeNombre.textContent = "";
+      input.classList.remove('border-2', 'border-red-600');
+      input.classList.add('border-2', 'border-green-600');
+      errorElement.textContent = '';
+      errorElement.classList.add('hidden');
+      return true;
+    }
+  }
+
+  function validarFormularioContact() {
+    const campos = {
+      nameContact: {
+        regex: /^[A-Za-zÁÉÍÓÚáéíóúÑñüÜ\s'-]+$/u,
+        maxLength: 60,
+        requiredMessage: 'El nombre es requerido.',
+        formatMessage: 'El nombre no tiene un formato válido.',
+        lengthMessage: 'El nombre es demasiado largo.',
+      },
+      emailContact: {
+        regex: /^[^@]+@[^@]+\.[^@]+$/,
+        maxLength: 80,
+        requiredMessage: 'El correo electrónico es requerido.',
+        formatMessage: 'El correo electrónico no tiene un formato válido.',
+        lengthMessage: 'El correo electrónico es demasiado largo.',
+      },
+      phoneContact: {
+        regex: /^\d{10}$/,
+        requiredMessage: 'El teléfono es requerido.',
+        formatMessage: 'El teléfono debe tener solo números y 10 dígitos.',
+      },
+      affairContact: {
+        maxLength: 100,
+        requiredMessage: 'El asunto es requerido.',
+        lengthMessage: 'El asunto es demasiado largo.',
+      },
+      messageContact: {
+        maxLength: 500,
+        requiredMessage: 'El mensaje es requerido.',
+        lengthMessage: 'El mensaje es demasiado largo.',
+      }
+    };
+
+    let formularioValido = true;
+
+    Object.keys(campos).forEach(id => {
+      const input = document.getElementById(id);
+      const config = campos[id];
+
+      const campoValido = validarCampo(input, config);
+      if (!campoValido) {
+        formularioValido = false;
+      }
+    });
+
+    if (!formularioValido) {
+      // Detiene el envío
+      return false;
     }
 
-    // validadcion para el email
-    if(!email){
-      mensajeEmail.classList.remove('hidden');
-      mensajeEmail.textContent = "El correo electrónico es requerido.";
-      return false;
-    }else if(email.length > 80){
-      mensajeEmail.classList.remove('hidden');
-      mensajeEmail.textContent = "El correo electrónico es demasiado largo.";
-      return false;
-    }else if(!regexEmail.test(email)){
-      mensajeEmail.classList.remove('hidden');
-      mensajeEmail.textContent = "El correo electrónico no tiene un formato valido.";
-      return false;
-    }else{
-      mensajeEmail.classList.add('hidden');
-      mensajeEmail.textContent = "";
-    }
-
-
-  console.log("enviado...");
-  return true;
-
-  
-}
+    //Todos los campos están bien
+    alert("Formulario enviado correctamente.");
+    return true;
+  }
