@@ -71,9 +71,6 @@ $pageTitle = "Contacto";
             </div>
           </div>
 
-
-
-      
       <!-- ubicacion -->
        <section class="mt-14 max-w-6xl mx-auto px-4">
         <div class="flex flex-col lg:flex-row flex-col-reverse items-center gap-8">
@@ -88,7 +85,6 @@ $pageTitle = "Contacto";
           </div>
         </div>
        </section>
-
 
     </section>
     <?php

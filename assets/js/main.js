@@ -366,7 +366,36 @@ document.addEventListener('DOMContentLoaded', () => {
       return false;
     }
 
+    const formData = new FormData();
+    formData.append('name', document.getElementById('nameContact').value.trim());
+    formData.append('email', document.getElementById('emailContact').value.trim());
+    formData.append('phone', document.getElementById('phoneContact').value.trim());
+    formData.append('affair', document.getElementById('affairContact').value.trim());
+    formData.append('message', document.getElementById('messageContact').value.trim());
+
+    fetch('backend/procesar-formulario.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      if (data.success) {
+        alert("Mensaje enviado correctamente.");
+        document.getElementById('formularioContact').reset();
+        document.querySelectorAll('input, textarea').forEach(el => el.classList.remove('border-green-600'));
+      } else {
+        alert("Error al enviar: " + data.message);
+      }
+    })
+    .catch(error => {
+      alert("Error de red o servidor.");
+      console.error(error);
+    });
+
+    return false; // evita recarga
+
     //Todos los campos están bien
-    alert("Formulario enviado correctamente.");
-    return true;
+    /* alert("Formulario enviado correctamente.");
+    return true; */
   }
