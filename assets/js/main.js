@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       check.innerHTML = `
         <input type="checkbox" id="${checkboxId}" value="${medida.diametro}" class="accent-[#2f767c] rounded-full mr-2 cursor-pointer" />
-        <label for="${checkboxId}" class="w-full cursor-pointer select-none">${medida.diametro}</label>
+        <label for="${checkboxId}" class="w-full cursor-pointer select-none">${medida.diametro} cm</label>
       `;
 
       list.appendChild(check);
@@ -223,7 +223,7 @@ function viewGaleria(){
         boton.textContent = galeria.classList.contains('hidden') ? "Galería de instalación y usos" : "Ocultar";
 }
 
-//   Script para manejar el consentimiento
+//Script para manejar el consentimiento
 document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById('cookieConsent');
     const acceptBtn = document.getElementById('acceptCookies');
@@ -296,6 +296,44 @@ function addPedido(medida){
       listaPedido.appendChild(li);
     });
 }
+
+function obtenerPedidosConCantidad() {
+  const listaPedido = document.querySelector('#lista-pedidos-input');
+  const inputs = listaPedido.querySelectorAll('input[type="number"]');
+
+  const pedidosConCantidad = {};
+
+  inputs.forEach(input => {
+    const medida = input.name;
+    const cantidad = parseInt(input.value, 10);
+
+    // Validamos que sea un número y que no sea NaN
+    if (!isNaN(cantidad) && cantidad > 0) {
+      pedidosConCantidad[medida] = cantidad;
+    }
+  });
+
+  return pedidosConCantidad;
+}
+
+function enviarInformacionFormModal(){
+  const formData = new FormData(form);
+  formData.append('pedidos', JSON.stringify(obtenerPedidosConCantidad()));
+
+  fetch('backend/formulario-modal.php', {
+    method: 'POST',
+    body: formData,
+  });
+}
+
+  function validarFormularioModal(){
+    const nombre = document.querySelector('#nameModal');
+
+    if(nombre){
+      enviarInformacionFormModal();
+      return true;
+    }
+  }
 
 document.addEventListener('DOMContentLoaded', () => {
     const campos = {
@@ -428,7 +466,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // desabilito el boton
     btnEnviar.disabled = true;
-    // btnEnviar.classList.remove('bg-[#2f767c]', 'hover:bg-[#2f767c]/80');
     btnEnviar.innerHTML = `
       <div role="status">
         <svg aria-hidden="true" class="inline w-5 h-5 text-[#2f767c] animate-spin fill-white" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -480,6 +517,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function habilitarBoton(boton){
     boton.innerHTML = 'Enviar';
-    // boton.classList.add('bg-[#2f767c]', 'hover:bg-[#2f767c]/80');
     boton.disabled = false;
   }

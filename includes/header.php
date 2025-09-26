@@ -66,10 +66,10 @@
     </button>
 
     <!-- Modal oculto -->
-    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden transition-opacity duration-300 overflow-y-scroll">
-        <div id="modal-content" class="bg-white p-6 rounded-lg w-full max-w-2xl transform scale-95 opacity-0 transition-all duration-300">
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden transition-opacity duration-300 p-4">
+        <div id="modal-content" class="bg-white p-6 rounded-lg w-full max-w-2xl max-h-[90vh] overflow-y-auto transform scale-95 opacity-0 transition-all duration-300">
             <h2 class="sm:text-2xl text-xl text-[#1e482a] font-bold mb-4">Formulario de cotización</h2>
-            <form id="contact-form" onsubmit="submitForm(event)">
+            <form id="contact-form" onsubmit="return validarFormularioModal()">
                 <!-- datos de contacto -->
                  <div class="relative flex items-center justify-center my-8">
                     <hr class="border-2 border-[#f78910] rounded-md w-full">
@@ -79,16 +79,16 @@
                     <!-- nombre del cliente y de la empresa -->
                     <div class="flex sm:flex-row flex-col gap-5 w-full">
                         <div class="flex-1">
-                            <label for="name" class="block mb-2 text-[#2f767c] font-bold">
+                            <label for="nameModal" class="block mb-2 text-[#2f767c] font-bold">
                                 Nombre del cliente<span class="font-bold text-red-600">*</span>
                             </label>
-                            <input type="text" name="name" id="name" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Nombre del cliente" autofocus />
+                            <input type="text" name="nameModal" id="nameModal" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Nombre del cliente" autofocus />
                         </div>
                         <div class="flex-1">
-                            <label for="name" class="block mb-2 text-[#2f767c] font-bold">
+                            <label for="nameEmpresa" class="block mb-2 text-[#2f767c] font-bold">
                                 Nombre de la empresa/negocio<span class="font-bold text-red-600">*</span>
                             </label>
-                            <input type="text" name="name" id="name" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Nombre de la empresa o negocio" />
+                            <input type="text" name="nameEmpresa" id="nameEmpresa" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Nombre de la empresa o negocio" />
                         </div>
                     </div>
                     <!-- telefono y estado -->
@@ -135,7 +135,6 @@
                     <hr class="border-2 border-[#f78910] rounded-md w-full">
                     <h2 class="absolute bg-white px-4 text-lg font-semibold text-[#f78910]">Pedido</h2>
                 </div>
-
 
                 <div class="flex sm:flex-row flex-col gap-5">
                     <!-- cargar lista para mostrar -->
@@ -216,7 +215,7 @@
             event.preventDefault();
 
             const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
+            const email = document.getElementById('nameEmpresa').value.trim();
             const message = document.getElementById('message').value.trim();
             const error = document.getElementById('form-error');
 
