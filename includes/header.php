@@ -37,7 +37,7 @@
     <!-- Contenedor del FAB -->
     <div id="fab-container" class="fixed bottom-40 right-6 z-50 flex flex-col items-end space-y-3">
         <!-- Botón de WhatsApp -->
-        <a href="https://wa.me/7224041872?text=Hola%2C%20estoy%20interesado%20en%20sus%20productos."
+        <a href="https://wa.me/7221417838?text=Hola%2C%20estoy%20interesado%20en%20sus%20productos."
             target="_blank"
             aria-label="Contáctame por WhatsApp"
             class="bg-green-600 p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-200 relative">
@@ -71,8 +71,7 @@
     </button>
 
     <!-- Modal oculto -->
-    <div id="modal"
-        class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden transition-opacity duration-300 overflow-y-scroll">
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden transition-opacity duration-300 overflow-y-scroll">
         <div id="modal-content" class="bg-white p-6 rounded-lg w-full max-w-2xl transform scale-95 opacity-0 transition-all duration-300">
             <h2 class="sm:text-2xl text-xl text-[#1e482a] font-bold mb-4">Formulario de cotización</h2>
             <form id="contact-form" onsubmit="submitForm(event)">
@@ -161,12 +160,6 @@
                             Ingresa la cantidad que requieres por cada medida
                         </span>
                         <ul id="lista-pedidos-input" class="mt-5">
-                            <!-- <li class="flex items-end space-x-2">
-                                <span class="block text-gray-700 font-semibold basis-1/4">
-                                    120 cm<span class="font-bold text-red-600">*</span>
-                                </span>
-                                <input type="number" name="" id="" class="basis-3/4 w-full h-10 text-gray-700 border-b-2 border-[#2f767c] px-2 outline-none" min="0" />
-                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -265,7 +258,7 @@
     </div>
 
 
-    <div class="w-full p-2 bg-[#1e482a]">
+    <div class="fixed z-10 -top-1 w-full p-2 bg-[#1e482a]">
         <header class="flex sm:justify-start justify-between items-center gap-5">
             <!-- logotipo -->
             <div class="w-20 sm:ml-20 ml-2">

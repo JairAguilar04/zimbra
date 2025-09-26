@@ -4,7 +4,7 @@ include("./includes/header.php");
 ?>
 
     <!-- slider -->
-    <div class="bg-gray-100">
+    <div class="sm:mt-20 mt-12 bg-gray-100">
         <div class="relative w-full overflow-hidden">
             <!-- Slides -->
             <div class="w-full">
@@ -68,12 +68,24 @@ include("./includes/header.php");
                         </tr>
                     </thead>
                     <tbody class="text-center" id="cuerpo-tabla">
-
+                        <!-- Llenamos la tabla desde JS -->
                     </tbody>
                 </table>
             </div>
         </div>
     </section>
+
+    <!-- Modal para visor PDF -->
+    <div id="modalPdf" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-lg shadow-lg w-[95%] max-w-5xl h-[90vh] flex flex-col relative">
+            <!-- boton cerrar el visor pdf -->
+            <img src="./assets/img/iconos/cerrar.png" id="cerrarModal" class="w-6 absolute sm:top-16 top-12 sm:right-10 right-6 transform duration-300 hover:-translate-y-1" alt="Cerrar"/>
+            <!-- Visor PDF -->
+            <div class="flex-grow overflow-hidden rounded-b-lg">
+                <iframe id="visorPdf" src="" class="w-full h-full" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
 
     <!-- CARDS -->
     <section class="max-w-6xl mx-auto px-4 py-8 bg-gray-100">
@@ -84,18 +96,18 @@ include("./includes/header.php");
                     <img src="./assets/img/iconos/paloma.png" alt="Icono elección" class="w-14 sm:w-20">
                 </div>
                 <div>
-                    <h3 class="text-[#2f767c] sm:text-lg text-base font-bold mb-1">ZimbraTubos&reg; tú mejor elección</h3>
+                    <h3 class="text-[#2f767c] sm:text-lg text-base font-bold mb-1">ZimbraTubos&reg;<br>tú mejor elección</h3>
                     <p class="text-sm text-gray-600">Fabricados a la medida, durables y eficientes para tus obras.</p>
                 </div>
             </div>
 
             <!-- CARD 2 -->
-            <div class=" p-4 flex items-center gap-5 rounded-lg hover:shadow-lg transform duration-300 hover:-translate-y-1">
+            <div class="p-4 flex items-center gap-5 rounded-lg hover:shadow-lg transform duration-300 hover:-translate-y-1">
                 <div>
                     <img src="./assets/img/iconos/estrella.png" alt="Icono ideal" class="w-14 sm:w-16">
                 </div>
                 <div>
-                    <h3 class="text-[#2f767c] sm:text-lg text-base font-bold mb-1">Material de alta calidad</h3>
+                    <h3 class="text-[#2f767c] sm:text-lg text-base font-bold mb-1">Material<br>de alta calidad</h3>
                     <p class="text-sm text-gray-600">Ideal para colar confiable y cómodo de instalar.</p>
                 </div>
             </div>
@@ -106,7 +118,7 @@ include("./includes/header.php");
                     <img src="./assets/img/iconos/envio.png" alt="Icono envio" class="w-14 sm:w-20">
                 </div>
                 <div>
-                    <h3 class="text-[#2f767c] sm:text-lg text-base font-bold mb-1">Envío confiable y seguro</h3>
+                    <h3 class="text-[#2f767c] sm:text-lg text-base font-bold mb-1">Envío confiable<br>y seguro</h3>
                     <p class="text-sm text-gray-600">Sujeto a rutas disponibles y cotización de flete.</p>
                 </div>
             </div>
@@ -117,7 +129,7 @@ include("./includes/header.php");
                     <img src="./assets/img/iconos/reciclaje.png" alt="Icono reciclaje" class="w-14 sm:w-20">
                 </div>
                 <div>
-                    <h3 class="text-[#2f767c] sm:text-lg text-base font-bold mb-1">Comprometidos con el reciclaje</h3>
+                    <h3 class="text-[#2f767c] sm:text-lg text-base font-bold mb-1">Comprometidos<br>con el reciclaje</h3>
                     <p class="text-sm text-gray-600">Fomentamos el reciclaje y cuidamos nuestro medio ambiente.</p>
                 </div>
             </div>

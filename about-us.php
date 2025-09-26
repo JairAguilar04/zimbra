@@ -2,9 +2,9 @@
 $pageTitle = "Nosotros";
     include('./includes/header.php');
 ?>
-    <section class="flex-grow max-w-6xl mx-auto w-full p-4 sm:p-6 bg-white">
-        <h2 class="text-center text-3xl text-[#1e482a] font-bold mt-5">ZimbraTubos&reg;</h2>
-        <div class="flex items-center sm:h-screen sm:-my-12">
+    <section class="sm:mt-20 mt-14 flex-grow max-w-6xl mx-auto w-full p-4 sm:p-6 bg-white">
+        <h2 class="text-center text-3xl text-[#1e482a] font-bold mt-5 mb-10">ZimbraTubos&reg;</h2>
+        <div class="flex items-center justify-center min-h-[calc(100vh-12rem)]">
             <div class="flex sm:flex-row flex-col gap-x-10 items-center sm:px-10 px-2">
                 <div>
                     <h2 class="text-center text-2xl text-[#1e482a] font-bold sm:mt-0 mt-10">¿Quiénes somos?</h2>
@@ -15,6 +15,8 @@ $pageTitle = "Nosotros";
                         Fabricamos tubos de zimbrado en múltiples medidas para adaptarnos a las necesidades de cada proyecto, brindando resistencia, precisión y confianza en cada pieza.
                     </p>
                 </div>
+
+                <!-- Imagen -->
                 <div class="sm:mt-0 mt-10">
                     <img src="./assets/img/tienda.png" alt="Tienda" class="rounded-md shadow-md shadow-gray-600 transform duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-gray-400">
                 </div>

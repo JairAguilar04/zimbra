@@ -14,9 +14,9 @@ if (!$nombre || !$email || !$telefono || !$asunto || !$mensaje) {
 }
 
 // ENVIAR CORREO
-$to = "email1234prueba@gmail.com"; // <-- reemplaza con tu correo
+$to = "email1234prueba@gmail.com";
 $subject = $asunto;
-$body = "Nombre: $nombre\nCorreo: $email\nTeléfono: $telefono\nAsunto: $asunto\nMensaje:\n$mensaje";
+$body = "Nombre: $nombre\n\nMensaje:\n$mensaje\n\nDatos de contacto\nCorreo: $email\nTeléfono: $telefono";
 $headers = "From: $email\r\nReply-To: $email";
 
 $correoEnviado = mail($to, $subject, $body, $headers);

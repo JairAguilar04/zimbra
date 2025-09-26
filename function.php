@@ -3,7 +3,7 @@
     include('./includes/header.php');
 ?>
 
-<section class="flex-grow max-w-6xl mx-auto w-full p-4 sm:p-6 bg-white">
+<section class="sm:mt-24 mt-14 flex-grow max-w-6xl mx-auto w-full p-4 sm:p-6 bg-white">
     <div>
         <div class="sm:w-[70%] w-full mx-auto">
             <iframe width="100%" height="315" class="rounded-xl"
@@ -21,7 +21,7 @@
     </div>
 
     <!-- carrusel imagenes -->
-    <div class="">
+    <div>
         <h2 class="text-center text-3xl text-[#1e482a] font-bold mt-14">Así resolvemos tus necesidades</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-10">
             <!-- Card 1 -->
@@ -50,8 +50,11 @@
         <button type="button" class="w-auto bg-[#2f767c] rounded-md text-white text-xl font-bold px-4 py-2 transform duration-300 hover:bg-[#2f767c]/80 hover:-translate-y-1" id="button-galeria" onClick="viewGaleria()">Galería de instalación y usos</button>
     </div>
 
-    <div class="my-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 h-96 overflow-y-auto hidden" id="galeria">
-        <!-- Imagen individual (repetida en bucle) -->
+    <div class="hidden" id="galeria">
+        <h2 class="text-2xl text-[#f78910] font-bold sm:p-0 p-2 mt-4">Techumbres</h2>
+        <div class="my-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 h-96 overflow-y-auto overflow-x-hidden w-full" id="grid-galeria">
+        <!-- Se llena desde JS -->
+        </div>
     </div>
 
     <!-- instructivo -->

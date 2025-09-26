@@ -1,0 +1,18 @@
+#grid-galeria::-webkit-scrollbar {
+  width: 8px; /* ancho de la barra */
+}
+
+#grid-galeria::-webkit-scrollbar-track {
+  background: #f3f4f6; /* color de fondo del track (claro) */
+  border-radius: 4px;
+}
+
+#grid-galeria::-webkit-scrollbar-thumb {
+  background-color: #f78910; /* color de la barra (naranja) */
+  border-radius: 4px;
+  border: 2px solid #f3f4f6; /* espacio alrededor para dar efecto */
+}
+
+#grid-galeria::-webkit-scrollbar-thumb:hover {
+  background-color: #d66f0d; /* color al pasar el mouse */
+}
