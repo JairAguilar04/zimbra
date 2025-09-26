@@ -103,6 +103,30 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+const notificacion = document.getElementById('notificacion');
+const mensajeNotificacion = document.getElementById('mensaje-notificacion');
+let timeoutId = null;
+
+function mostrarNotificacion(mensaje, duracion) {
+  // Si la notificación ya está visible con el mismo mensaje, no hacemos nada
+  if (!notificacion.classList.contains('hidden') && mensajeNotificacion.innerText === mensaje) {
+    return;
+  }
+
+  // Ponemos el mensaje y mostramos la notificación
+  mensajeNotificacion.innerText = mensaje;
+  notificacion.classList.remove('hidden');
+
+  // Limpiamos timeout anterior si existiera
+  if (timeoutId) clearTimeout(timeoutId);
+
+  // Programamos para ocultar la notificación después de tiempo elegido
+  timeoutId = setTimeout(() => {
+    notificacion.classList.add('hidden');
+    timeoutId = null;
+  }, duracion);
+}
+
 // controla el iframe del visor pdf
 document.addEventListener("click", function (e) {
   if (e.target.classList.contains("abrir-pdf")) {
@@ -114,10 +138,10 @@ document.addEventListener("click", function (e) {
         visor.src = rutaPdf;
         modal.classList.remove("hidden");
         modal.classList.add("flex");
+    }else{
+      mostrarNotificacion("No existe ficha técnica para este registro", 2500);
     }
   }
-
-  console.log("click");
 
   // Cerrar modal
   if (e.target.id === "cerrarModal" || e.target.id === "modalPdf") {
@@ -352,6 +376,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function validarFormularioContact() {
     const btnEnviar = document.querySelector('#btnEnviar');
+
     const campos = {
       nameContact: {
         regex: /^[A-Za-zÁÉÍÓÚáéíóúÑñüÜ\s'-]+$/u,
@@ -402,8 +427,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // desabilito el boton
-    btnEnviar.classList.remove('bg-[#2f767c]', 'hover:bg-[#2f767c]/80');
-    btnEnviar.classList.add('bg-gray-200', 'cursor-progress');
+    btnEnviar.disabled = true;
+    // btnEnviar.classList.remove('bg-[#2f767c]', 'hover:bg-[#2f767c]/80');
     btnEnviar.innerHTML = `
       <div role="status">
         <svg aria-hidden="true" class="inline w-5 h-5 text-[#2f767c] animate-spin fill-white" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -420,7 +445,6 @@ document.addEventListener('DOMContentLoaded', () => {
     formData.append('phone', document.getElementById('phoneContact').value.trim());
     formData.append('affair', document.getElementById('affairContact').value.trim());
     formData.append('message', document.getElementById('messageContact').value.trim());
-
     fetch('backend/procesar-formulario.php', {
       method: 'POST',
       body: formData
@@ -433,6 +457,9 @@ document.addEventListener('DOMContentLoaded', () => {
         
         document.getElementById('formularioContact').reset();
         document.querySelectorAll('input, textarea').forEach(el => el.classList.remove('border-green-600'));
+        
+        mostrarNotificacion("¡Gracias por confiar en nosotros! En breve te contactaremos vía correo electrónico y WhatsApp.", 5000);
+
       } else {
         // habilito el boton
         habilitarBoton(btnEnviar);
@@ -444,7 +471,6 @@ document.addEventListener('DOMContentLoaded', () => {
       habilitarBoton(btnEnviar);
     });
 
-
     return false; // evita recarga
 
     //Todos los campos están bien
@@ -454,6 +480,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function habilitarBoton(boton){
     boton.innerHTML = 'Enviar';
-    boton.classList.remove('bg-gray-200', 'cursor-progress');
-    boton.classList.add('bg-[#2f767c]', 'hover:bg-[#2f767c]/80');
+    // boton.classList.add('bg-[#2f767c]', 'hover:bg-[#2f767c]/80');
+    boton.disabled = false;
   }

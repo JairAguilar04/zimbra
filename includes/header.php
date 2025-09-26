@@ -35,7 +35,7 @@
 
 <body class="min-h-screen flex flex-col bg-gray-200">
     <!-- Contenedor del FAB -->
-    <div id="fab-container" class="fixed bottom-40 right-6 z-50 flex flex-col items-end space-y-3">
+    <div id="fab-container" class="fixed bottom-40 right-6 z-50 flex flex-col items-end space-y-1">
         <!-- Botón de WhatsApp -->
         <a href="https://wa.me/7221417838?text=Hola%2C%20estoy%20interesado%20en%20sus%20productos."
             target="_blank"
@@ -52,11 +52,6 @@
         <!-- Botón para abrir el modal -->
         <button onclick="openModal()"
             class="bg-[#2f767c] p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-200">
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none"
-                viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M8 10h.01M12 10h.01M16 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg> -->
             <img src="./assets/img/iconos/pedidos.png" alt="Pedidos" class="w-6">
         </button>
     </div>
@@ -164,8 +159,6 @@
                     </div>
                 </div>
 
-
-
                 <div class="flex justify-end space-x-2 mt-5">
                     <button type="button" onclick="closeModal()" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Cancelar</button>
                     <button type="submit" class="bg-[#2f767c] hover:bg-[#2f767c]/80 text-white px-4 py-2 rounded">Enviar</button>
@@ -256,6 +249,11 @@
             </div>
         </div>
     </div>
+
+    <!-- notificacion -->
+     <div id="notificacion" class="fixed sm:top-24 top-14 sm:right-6 right-1 z-50 sm:w-1/4 w-3/4 bg-[#2f767c] p-3 rounded-md hidden">
+        <p id="mensaje-notificacion" class="text-white text-lg text-justify"></p>
+     </div>
 
 
     <div class="fixed z-10 -top-1 w-full p-2 bg-[#1e482a]">

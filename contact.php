@@ -65,7 +65,7 @@ include('./includes/header.php');
         </div>
         <!-- button -->
         <div class="text-end mt-5">
-          <button type="submit" id="btnEnviar" class="sm:w-auto w-full bg-[#2f767c] rounded-md text-white text-xl font-bold px-4 py-2 transform duration-300 hover:bg-[#2f767c]/80 hover:-translate-y-1">Enviar</button>
+          <button type="submit" id="btnEnviar" class="sm:w-auto w-full bg-[#2f767c] rounded-md text-white text-xl font-bold px-4 py-2 transform duration-300 hover:bg-[#2f767c]/80 hover:-translate-y-1 disabled:bg-gray-200 disabled:cursor-progress">Enviar</button>
         </div>
       </form>
     </div>
