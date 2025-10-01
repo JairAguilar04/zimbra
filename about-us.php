@@ -7,7 +7,7 @@ $pageTitle = "Nosotros";
         <div class="flex items-center justify-center min-h-[calc(100vh-12rem)]">
             <div class="flex sm:flex-row flex-col gap-x-10 items-center sm:px-10 px-2">
                 <div>
-                    <h2 class="text-center text-2xl text-[#1e482a] font-bold sm:mt-0 mt-10">¿Quiénes somos?</h2>
+                    <h2 class="text-center text-2xl text-[#1e482a] font-bold sm:mt-0 -mt-5">¿Quiénes somos?</h2>
                     <p class="my-5 text-justify">
                         En <span class="text-[#1e482a] font-bold">Zimbratubos&reg;</span> somos una empresa mexicana, líder en la fabricación de tubos de cimbra. Con más de 15 años de experiencia y la confianza de más de 1,000 clientes en todo el país, ofrecemos productos de la más alta calidad que cumplen con exigentes estándares industriales.
                     </p>

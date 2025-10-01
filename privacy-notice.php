@@ -2,7 +2,7 @@
 $pageTitle = "Nosotros";
     include('./includes/header.php');
 ?>
-    <section class="flex-grow max-w-6xl mx-auto w-full p-4 sm:p-6 bg-white">
+    <section class="sm:mt-20 mt-12 flex-grow max-w-6xl mx-auto w-full p-4 sm:p-6 bg-white">
         <h2 class="text-center text-3xl text-[#1e482a] font-bold mt-5">Aviso de privacidad</h2>
 
         <div class="mt-8 space-y-8 text-gray-800 text-justify text-base leading-relaxed sm:px-20 px-2">

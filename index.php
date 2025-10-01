@@ -79,7 +79,7 @@ include("./includes/header.php");
     <div id="modalPdf" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50">
         <div class="bg-white rounded-lg shadow-lg w-[95%] max-w-5xl h-[90vh] flex flex-col relative">
             <!-- boton cerrar el visor pdf -->
-            <img src="./assets/img/iconos/cerrar.png" id="cerrarModal" class="w-6 absolute sm:top-16 top-12 sm:right-10 right-6 transform duration-300 hover:-translate-y-1" alt="Cerrar"/>
+            <img src="./assets/img/iconos/cerrar.png" id="cerrarModal" class="w-6 absolute -top-7 right-0 transform duration-300 hover:-translate-y-1" alt="Cerrar"/>
             <!-- Visor PDF -->
             <div class="flex-grow overflow-hidden rounded-b-lg">
                 <iframe id="visorPdf" src="" class="w-full h-full" frameborder="0"></iframe>
