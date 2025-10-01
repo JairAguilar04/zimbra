@@ -20,7 +20,7 @@ include('./includes/header.php');
         <div class="flex flex-col gap-y-5 mt-8">
           <!-- name -->
           <div>
-            <label for="name" class="block mb-2 text-[#2f767c] font-bold">
+            <label for="nameContact" class="block mb-2 text-[#2f767c] font-bold">
               Nombre<span class="font-bold text-red-600">*</span>
             </label>
             <input type="text" name="name" id="nameContact" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Nombre o empresa" autofocus />
@@ -31,7 +31,7 @@ include('./includes/header.php');
           <div class="flex md:flex-row flex-col gap-x-5">
             <!-- email -->
             <div class="md:w-3/5 w-full">
-              <label for="email" class="block mb-2 text-[#2f767c] font-bold">
+              <label for="emailContact" class="block mb-2 text-[#2f767c] font-bold">
                 Correo electrónico<span class="font-bold text-red-600">*</span>
               </label>
               <input type="email" name="email" id="emailContact" class="w-full h-10 text-gray-700 rounded-md px-2 bg-gray-200 outline-none" placeholder="Correo electrónico" />
@@ -39,7 +39,7 @@ include('./includes/header.php');
             </div>
             <!-- phone -->
             <div class="md:w-2/5 w-full sm:mt-0 mt-5">
-              <label for="phone" class="block mb-2 text-[#2f767c] font-bold">
+              <label for="phoneContact" class="block mb-2 text-[#2f767c] font-bold">
                 Teléfono<span class="font-bold text-red-600">*</span>
               </label>
               <input type="phone" name="phone" id="phoneContact" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Teléfono" />
@@ -48,7 +48,7 @@ include('./includes/header.php');
           </div>
           <!-- affair -->
           <div>
-            <label for="affair" class="block mb-2 text-[#2f767c] font-bold">
+            <label for="affairContact" class="block mb-2 text-[#2f767c] font-bold">
               Asunto<span class="font-bold text-red-600">*</span>
             </label>
             <input type="text" name="affair" id="affairContact" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Asunto" />
@@ -56,7 +56,7 @@ include('./includes/header.php');
           </div>
           <!-- message -->
           <div>
-            <label for="message" class="block mb-2 text-[#2f767c] font-bold">
+            <label for="messageContact" class="block mb-2 text-[#2f767c] font-bold">
               Mensaje<span class="font-bold text-red-600">*</span>
             </label>
             <textarea name="message" id="messageContact" cols="20" rows="4" class="w-full text-gray-700 pl-2 rounded-md bg-gray-200 outline-none" placeholder="Mensaje..."></textarea>

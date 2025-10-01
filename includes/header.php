@@ -69,12 +69,13 @@
     <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden transition-opacity duration-300 p-4">
         <div id="modal-content" class="bg-white p-6 rounded-lg w-full max-w-2xl max-h-[90vh] overflow-y-auto transform scale-95 opacity-0 transition-all duration-300">
             <h2 class="sm:text-2xl text-xl text-[#1e482a] font-bold mb-4">Formulario de cotización</h2>
+            <div class="relative flex items-center justify-center my-8">
+                <hr class="border-2 border-[#f78910] rounded-md w-full">
+                <h2 class="absolute bg-white px-4 text-lg font-semibold text-[#f78910]">Datos de contacto</h2>
+            </div>
+            <!-- formulario -->
             <form id="contact-form" onsubmit="return validarFormularioModal()">
                 <!-- datos de contacto -->
-                 <div class="relative flex items-center justify-center my-8">
-                    <hr class="border-2 border-[#f78910] rounded-md w-full">
-                    <h2 class="absolute bg-white px-4 text-lg font-semibold text-[#f78910]">Datos de contacto</h2>
-                </div>
                 <div class="flex flex-col gap-y-5">
                     <!-- nombre del cliente y de la empresa -->
                     <div class="flex sm:flex-row flex-col gap-5 w-full">
@@ -83,49 +84,55 @@
                                 Nombre del cliente<span class="font-bold text-red-600">*</span>
                             </label>
                             <input type="text" name="nameModal" id="nameModal" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Nombre del cliente" autofocus />
+                            <span class="text-red-600 text-sm" id="errorNameModal"></span>
                         </div>
                         <div class="flex-1">
-                            <label for="nameEmpresa" class="block mb-2 text-[#2f767c] font-bold">
+                            <label for="nameEmpresaModal" class="block mb-2 text-[#2f767c] font-bold">
                                 Nombre de la empresa/negocio<span class="font-bold text-red-600">*</span>
                             </label>
-                            <input type="text" name="nameEmpresa" id="nameEmpresa" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Nombre de la empresa o negocio" />
+                            <input type="text" name="nameEmpresaModal" id="nameEmpresaModal" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Nombre de la empresa o negocio" />
+                            <span class="text-red-600 text-sm" id="errorNameEmpresaModal"></span>
                         </div>
                     </div>
                     <!-- telefono y estado -->
                     <div class="flex sm:flex-row flex-col flex-row w-full gap-5">
                         <!-- telefono -->
                         <div class="basis-1/4">
-                            <label for="telefono" class="block mb-2 text-[#2f767c] font-bold">
+                            <label for="telefonoModal" class="block mb-2 text-[#2f767c] font-bold">
                                 Teléfono<span class="font-bold text-red-600">*</span>
                             </label>
-                            <input type="text" name="telefono" id="telefono" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Teléfono" />
+                            <input type="text" name="telefonoModal" id="telefonoModal" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Teléfono" />
+                            <span class="text-red-600 text-sm" id="errorTelefonoModal"></span>
                         </div>
                         <!-- estado -->
                         <div class="basis-3/4">
-                            <label for="estado" class="block mb-2 text-[#2f767c] font-bold">
+                            <label for="estadoModal" class="block mb-2 text-[#2f767c] font-bold">
                                 Estado<span class="font-bold text-red-600">*</span>
                             </label>
-                            <select class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" id="estado" name="estado">
-                                <option value="mexico">México</option>
-                                <option value="cdmx">CDMX</option>
+                            <select class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" id="estadoModal" name="estadoModal">
+                                <option value="" class="disabled:bg-gray-200" disabled selected>Seleccione una opción</option>
+                                <!-- se llena desde JS -->
                             </select>
+                            <span class="text-red-600 text-sm" id="errorEstadoModal"></span>
                         </div>
                     </div>
-                    <!-- municipio y localidad -->
+                    <!-- municipio y poblacion -->
                      <div class="flex sm:flex-row flex-col gap-5">
                         <!-- municipio -->
                          <div class="flex-1">
-                            <label for="municipio" class="block mb-2 text-[#2f767c] font-bold">
+                            <label for="municipioModal" class="block mb-2 text-[#2f767c] font-bold">
                                 Munincipio<span class="font-bold text-red-600">*</span>
                             </label>
-                            <input type="text" name="municipio" id="municipio" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Municipio" />
+                            <input type="text" name="municipioModal" id="municipioModal" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Municipio" />
+                            <span class="text-red-600 text-sm" id="errorMunicipioModal"></span>
                          </div>
-                        <!-- localidad -->
+                        <!-- poblacion -->
                         <div class="flex-1">
-                            <label for="localidad" class="block mb-2 text-[#2f767c] font-bold">
-                                Localidad<span class="font-bold text-red-600">*</span>
+                            <label for="poblacionModal" class="block mb-2 text-[#2f767c] font-bold">
+                                Población<span class="font-bold text-red-600">*</span>
                             </label>
-                            <input type="text" name="localidad" id="localidad" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Localidad" />
+                            <input type="text" name="poblacionModal" id="poblacionModal" class="w-full h-10 text-gray-700 rounded-md bg-gray-200 px-2 outline-none" placeholder="Población" />
+                            <span class="text-red-600 text-sm" id="errorPoblacionModal"></span>
                         </div>
                      </div>
                 </div>
@@ -142,27 +149,28 @@
                         <span class="block mb-2 text-[#2f767c] font-bold">
                             Medidas<span class="font-bold text-red-600">*</span>
                         </span>
-                        <div class="w-full h-10 text-gray-700 rounded-md rounded-b-none bg-gray-200 px-2 py-2 outline-none cursor-pointer" id="btn-view-list" onclick="viewList()">
-                            Seleccione las medidas de su interés
+                        <div class="w-full h-10 text-gray-700 rounded-md rounded-b-none bg-gray-200 px-2 py-2 outline-none cursor-pointer select-none" onclick="viewList()">
+                            Selecciona las medidas de tu interés
                         </div>
                         <div class="w-full text-gray-700 rounded-md rounded-t-none bg-gray-200 px-2 py-3 outline-none hidden" id="view-list">
                             <!-- recorremos la lista desde JS -->
                         </div>
                     </div>
                     <div class="flex-1">
-                        <span class="block mb-2 text-[#2f767c] font-bold">
+                        <span class="block mb-2 text-[#2f767c] font-bold hidden" id="titulo-input-cantidad">
                             Ingresa la cantidad que requieres por cada medida
                         </span>
                         <ul id="lista-pedidos-input" class="mt-5">
                         </ul>
+                        <span class="text-red-600 text-sm hidden" id="errorPedidos">Ingresa al menos un pedido.</span>
                     </div>
                 </div>
 
+                <!-- botones -->
                 <div class="flex justify-end space-x-2 mt-5">
-                    <button type="button" onclick="closeModal()" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Cancelar</button>
-                    <button type="submit" class="bg-[#2f767c] hover:bg-[#2f767c]/80 text-white px-4 py-2 rounded">Enviar</button>
+                    <button type="button" onclick="closeModal()" class="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 transform duration-300 hover:-translate-y-1">Cancelar</button>
+                    <button type="submit" id="btn-modal" class="bg-[#2f767c] hover:bg-[#2f767c]/80 text-white px-4 py-2 rounded transform duration-300 hover:-translate-y-1 disabled:bg-gray-200 disabled:cursor-progress">Enviar</button>
                 </div>
-                <p id="form-error" class="text-red-500 text-sm mt-2 hidden">Por favor completa todos los campos.</p>
             </form>
         </div>
     </div>
@@ -209,28 +217,6 @@
             setTimeout(() => {
                 modal.classList.add('hidden');
             }, 300);
-        }
-
-        function submitForm(event) {
-            event.preventDefault();
-
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('nameEmpresa').value.trim();
-            const message = document.getElementById('message').value.trim();
-            const error = document.getElementById('form-error');
-
-            if (!name || !email || !message) {
-                error.classList.remove('hidden');
-                return;
-            }
-
-            error.classList.add('hidden');
-
-            // Aquí puedes manejar el envío real, como un fetch()
-
-            alert("Formulario enviado. ¡Gracias!");
-            closeModal();
-            document.getElementById('contact-form').reset();
         }
     </script>
 
