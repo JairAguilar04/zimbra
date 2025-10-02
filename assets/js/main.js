@@ -1,36 +1,3 @@
-// slider
-document.addEventListener("DOMContentLoaded", () => {
-  const slides = document.querySelectorAll(".slide");
-  let currentIndex = 0;
-  // segundos
-  let intervalTime = 2500;
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle("hidden", i !== index);
-    });
-  }
-
-  function nextSlide() {
-    currentIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
-    showSlide(currentIndex);
-  }
-
-  document.getElementById("prev").addEventListener("click", () => {
-    currentIndex = currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
-    showSlide(currentIndex);
-  });
-
-  document.getElementById("next").addEventListener("click", () => {
-    nextSlide();
-  });
-
-  // Cambio automático (segundos)
-  setInterval(nextSlide, intervalTime);
-
-  showSlide(currentIndex);
-});
-
 // carga los datos de la tabla
 const medidas = [
   { diametro: 10, largo: 3, url: "./assets/pdf/diametro_10.pdf" },
@@ -183,51 +150,6 @@ function mostrarNotificacion(mensaje, duracion) {
   }, duracion);
 }
 
-// controla el iframe del visor pdf
-document.addEventListener("click", function (e) {
-  if (e.target.classList.contains("abrir-pdf")) {
-    const rutaPdf = e.target.getAttribute("data-src");
-    const visor = document.getElementById("visorPdf");
-    const modal = document.getElementById("modalPdf");
-
-    if (rutaPdf !== "undefined" && visor && modal) {
-      visor.src = rutaPdf;
-      modal.classList.remove("hidden");
-      modal.classList.add("flex");
-    } else {
-      mostrarNotificacion("No existe guía técnica para esta medida.", 2500);
-    }
-  }
-
-  // Cerrar modal
-  if (e.target.id === "cerrarModal" || e.target.id === "modalPdf") {
-    const modal = document.getElementById("modalPdf");
-    const visor = document.getElementById("visorPdf");
-    if (modal && visor) {
-      visor.src = ""; // Limpia el visor
-      modal.classList.add("hidden");
-      modal.classList.remove("flex");
-    }
-  }
-});
-
-// animation iframe
-document.addEventListener("DOMContentLoaded", () => {
-  const elements = document.querySelectorAll(".fade-in-element");
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove("opacity-0", "translate-y-5");
-        }
-      });
-    },
-    { threshold: 0.2 }
-  );
-
-  elements.forEach((el) => observer.observe(el));
-});
-
 // menu de hamburguesa
 const menuToggle = document.getElementById("menu-toggle");
 const menuClose = document.getElementById("menu-close");
@@ -247,40 +169,6 @@ function closeMenu() {
 menuToggle.addEventListener("click", openMenu);
 menuClose.addEventListener("click", closeMenu);
 overlay.addEventListener("click", closeMenu);
-
-// mostrar galeria
-let galeriaCargada = false;
-function viewGaleria() {
-  const galeria = document.querySelector("#galeria");
-  const gridGaleria = document.querySelector("#grid-galeria");
-  const boton = document.querySelector("#button-galeria");
-  const fragment = document.createDocumentFragment();
-
-  if (!galeriaCargada) {
-    fetch("./assets/js/rutas.json")
-      .then((res) => res.json())
-      .finally(() => {
-        boton.disabled = false;
-      })
-      .then((imagenes) => {
-        imagenes.forEach((img) => {
-          const div = document.createElement("div");
-          div.innerHTML = `
-            <img src="${img.ruta}" alt="${img.nombre}" 
-              class="w-full aspect-[3/2] object-cover rounded-md shadow-md hover:scale-105 transition-transform duration-300">`;
-          fragment.appendChild(div);
-        });
-
-        gridGaleria.appendChild(fragment);
-        galeriaCargada = true;
-      })
-      .catch((error) => console.error("Error cargando las imágenes:", error));
-  }
-  galeria.classList.toggle("hidden");
-  boton.textContent = galeria.classList.contains("hidden")
-    ? "Galería de instalación y usos"
-    : "Ocultar";
-}
 
 //Script para manejar el consentimiento
 document.addEventListener("DOMContentLoaded", function () {
@@ -321,6 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// mostrar lista en modal
 function viewList() {
   const list = document.querySelector("#view-list");
   list.classList.toggle("hidden");
@@ -626,114 +515,6 @@ function validarCampo(input, config) {
     errorElement.classList.add("hidden");
     return true;
   }
-}
-
-function validarFormularioContact() {
-  const btnEnviar = document.querySelector("#btnEnviar");
-
-  const campos = {
-    nameContact: {
-      regex: /^[A-Za-zÁÉÍÓÚáéíóúÑñüÜ\s'-]+$/u,
-      maxLength: 60,
-      requiredMessage: "El nombre es requerido.",
-      formatMessage: "El nombre no tiene un formato válido.",
-      lengthMessage: "El nombre es demasiado largo.",
-    },
-    emailContact: {
-      regex: /^[^@]+@[^@]+\.[^@]+$/,
-      maxLength: 80,
-      requiredMessage: "El correo electrónico es requerido.",
-      formatMessage: "El correo electrónico no tiene un formato válido.",
-      lengthMessage: "El correo electrónico es demasiado largo.",
-    },
-    phoneContact: {
-      regex: /^\d{10}$/,
-      requiredMessage: "El teléfono es requerido.",
-      formatMessage: "El teléfono debe tener solo números y 10 dígitos.",
-    },
-    affairContact: {
-      maxLength: 100,
-      requiredMessage: "El asunto es requerido.",
-      lengthMessage: "El asunto es demasiado largo.",
-    },
-    messageContact: {
-      maxLength: 500,
-      requiredMessage: "El mensaje es requerido.",
-      lengthMessage: "El mensaje es demasiado largo.",
-    },
-  };
-
-  let formularioValido = true;
-
-  Object.keys(campos).forEach((id) => {
-    const input = document.getElementById(id);
-    const config = campos[id];
-
-    const campoValido = validarCampo(input, config);
-    if (!campoValido) {
-      formularioValido = false;
-    }
-  });
-
-  if (!formularioValido) {
-    // Detiene el envío
-    return false;
-  }
-
-  // desabilito el boton
-  deshabilitarBoton(btnEnviar);
-
-  const formData = new FormData();
-  formData.append("name", document.getElementById("nameContact").value.trim());
-  formData.append(
-    "email",
-    document.getElementById("emailContact").value.trim()
-  );
-  formData.append(
-    "phone",
-    document.getElementById("phoneContact").value.trim()
-  );
-  formData.append(
-    "affair",
-    document.getElementById("affairContact").value.trim()
-  );
-  formData.append(
-    "message",
-    document.getElementById("messageContact").value.trim()
-  );
-  fetch("backend/procesar-formulario.php", {
-    method: "POST",
-    body: formData,
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      if (data.success) {
-        // habilito el boton
-        habilitarBoton(btnEnviar);
-
-        document.getElementById("formularioContact").reset();
-        document.querySelectorAll("input, textarea").forEach((el) => el.classList.remove("border-green-600"));
-
-        mostrarNotificacion(
-          "¡Gracias por confiar en nosotros! En breve te contactaremos vía correo electrónico y WhatsApp.",
-          5000
-        );
-      } else {
-        // habilito el boton
-        habilitarBoton(btnEnviar);
-      }
-    })
-    .catch((error) => {
-      console.error(error);
-      // habilito el boton
-      habilitarBoton(btnEnviar);
-    });
-
-  return false; // evita recarga
-
-  //Todos los campos están bien
-  /* alert("Formulario enviado correctamente.");
-    return true; */
 }
 
 function deshabilitarBoton(boton) {

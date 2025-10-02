@@ -91,7 +91,11 @@ $correoEnviado = mail($to, $subject, $body, $headers);
 $mensajeWhatsApp = rawurlencode("*=====----- Nueva cotización =====-----*\n\n*Datos del cliente*\n*Nombre:* $nombre\n*Empresa:* $nombreEmpresa\n*Teléfono:* $telefono\n\n*Dirección*\n*Estado:* $estado\n*Municipio:* $municipio\n*Población:* $poblacion\n\n*Productos solicitados*\n$datallePedidosWhatsapp");
 
 if ($correoEnviado) {
-    echo json_encode(['success' => true, 'whatsapp_link' => "https://wa.me/5217221417838?text=$mensajeWhatsApp", 'message' => "Tu cotización ha sido recibida.\nEn breve, nuestro equipo se pondrá en contacto contigo para ofrecerte una atención personalizada."]);
+    echo json_encode([
+      'success' => true,
+      'whatsapp_link' => "https://wa.me/5217221417838?text=$mensajeWhatsApp",
+      'message' => "Tu cotización ha sido recibida.\nEn breve, nuestro equipo se pondrá en contacto contigo para ofrecerte una atención personalizada."
+    ]);
 } else {
     echo json_encode(['success' => false, 'message' => 'No se pudo enviar el correo.']);
 }

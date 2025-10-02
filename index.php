@@ -136,6 +136,8 @@ include("./includes/header.php");
         </div>
     </section>
 
+    <script src="./assets/js/home.js"></script>
+
     <?php
         include("./includes/footer.php");
     ?>

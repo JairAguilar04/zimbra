@@ -87,6 +87,9 @@ include('./includes/header.php');
   </section>
 
 </section>
+
+<script src="./assets/js/contac.js"></script>
+
 <?php
 include("./includes/footer.php");
 ?>

@@ -13,20 +13,23 @@ if (!$nombre || !$email || !$telefono || !$asunto || !$mensaje) {
     exit;
 }
 
-// ENVIAR CORREO
 $to = "email1234prueba@gmail.com";
 $subject = $asunto;
 $body = "Nombre: $nombre\n\nMensaje:\n$mensaje\n\nDatos de contacto\nCorreo: $email\nTeléfono: $telefono";
 $headers = "From: $email\r\nReply-To: $email";
 
+// ENVIAR CORREO
 $correoEnviado = mail($to, $subject, $body, $headers);
 
 // ENVIAR WHATSAPP (simulado: abre WhatsApp Web con mensaje)
 $mensajeWhatsApp = rawurlencode("Nuevo mensaje:\nNombre: $nombre\nTeléfono: $telefono\nEmail: $email\nAsunto: $asunto\nMensaje:\n$mensaje");
-// Si tienes una API real de WhatsApp Business, aquí haces la llamada POST
 
 if ($correoEnviado) {
-    echo json_encode(['success' => true, 'whatsapp_link' => "https://wa.me/5217228014814?text=$mensajeWhatsApp"]);
+    echo json_encode([
+        'success' => true,
+        'whatsapp_link' => "https://wa.me/5217228014814?text=$mensajeWhatsApp",
+        'message' => '¡Gracias por confiar en nosotros! En breve nos pondremos en contacto contigo.'
+    ]);
 } else {
     echo json_encode(['success' => false, 'message' => 'No se pudo enviar el correo.']);
 }
