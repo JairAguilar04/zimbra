@@ -334,6 +334,7 @@ function validarFormularioModal() {
 
   if (Object.keys(pedidosModal).length === 0) {
     errorPedidos.classList.remove("hidden");
+    viewList();
     return false;
   } else {
     errorPedidos.classList.add("hidden");
@@ -343,26 +344,11 @@ function validarFormularioModal() {
 
   const formData = new FormData();
   formData.append("name", document.getElementById("nameModal").value.trim());
-  formData.append(
-    "nameEmpresa",
-    document.getElementById("nameEmpresaModal").value.trim()
-  );
-  formData.append(
-    "phone",
-    document.getElementById("telefonoModal").value.trim()
-  );
-  formData.append(
-    "estado",
-    document.getElementById("estadoModal").value.trim()
-  );
-  formData.append(
-    "municipio",
-    document.getElementById("municipioModal").value.trim()
-  );
-  formData.append(
-    "poblacion",
-    document.getElementById("poblacionModal").value.trim()
-  );
+  formData.append("nameEmpresa", document.getElementById("nameEmpresaModal").value.trim());
+  formData.append("phone", document.getElementById("telefonoModal").value.trim());
+  formData.append("estado", document.getElementById("estadoModal").value.trim());
+  formData.append("municipio", document.getElementById("municipioModal").value.trim());
+  formData.append("poblacion", document.getElementById("poblacionModal").value.trim());
   formData.append("pedidos", JSON.stringify(pedidosModal));
 
   fetch("backend/formulario-modal.php", {
@@ -383,22 +369,18 @@ function validarFormularioModal() {
         listaPedido.innerHTML = "";
         //cerramos modal y mostramos notificacion
         closeModal();
-        // mostrarNotificacion("Tu cotización ha sido recibida.\nEn breve, nuestro equipo se pondrá en contacto contigo para ofrecerte una atención personalizada.",5000);
         mostrarNotificacion(data.message, 5000);
-        //Mandar el link de whatsapp
-        setTimeout(() => {
-          window.location.href = data.whatsapp_link;
-        }, 5100);
-        console.log(data.whatsapp_link);
         
       } else {
         habilitarBoton(boton);
         mostrarNotificacion(data.message, 2500);
+        console.log("else");
       }
     })
     .catch((error) => {
       console.error(error);
       habilitarBoton(boton);
+      mostrarNotificacion(error, 3000);
     });
   return false;
 }

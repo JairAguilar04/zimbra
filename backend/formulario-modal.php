@@ -1,5 +1,11 @@
 <?php
+require '../vendor/autoload.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
 header('Content-Type: application/json');
+header('Cache-Control: no-cache, must-revalidate');
 
 $nombre = trim($_POST['name'] ?? '');
 $nombreEmpresa = trim($_POST['nameEmpresa'] ?? '');
@@ -18,9 +24,8 @@ if (!$nombre || !$nombreEmpresa || !$telefono || !$estado || !$municipio || !$po
 
 
 $detallePedidos = "";
-$datallePedidosWhatsapp = "";
 
-//convertimos el array a string para el correo y whatsapp
+//convertimos el array a string para el correo
 foreach($pedidos as $idProducto => $cantidad){
     $detallePedidos .= "
         <tr style='text-align: center;'>
@@ -28,15 +33,11 @@ foreach($pedidos as $idProducto => $cantidad){
             <td style='padding: 8px; border: 1px solid #ddd;'>$cantidad pzs</td>
         </tr>
     ";
-
-    $datallePedidosWhatsapp .= "
-      Tubo de $idProducto cm ==> $cantidad pzs\n
-    ";
 }
 
 // armamos el html para que el email tenga mejor estructura
 $body = "
-<html>
+<html lang='es'>
 <head>
   <meta charset='UTF-8'>
   <style>
@@ -49,19 +50,24 @@ $body = "
   </style>
 </head>
 <body>
-  <h2>Cotización de tubos para: $nombre</h2>
 
-  <h3>Datos del cliente</h3>
-  <p><strong>Nombre:</strong> $nombre<br>
-     <strong>Empresa:</strong> $nombreEmpresa<br>
-     <strong>Teléfono:</strong> $telefono</p>
+  <h2 style='background: #1e482a; padding: 10px; color: white; text-decoration: none; width: 90%; text-align: center;'>Nueva cotización desde el sitio web</h2>
 
-  <h3>Dirección</h3>
-  <p><strong>Estado:</strong> $estado<br>
-     <strong>Municipio:</strong> $municipio<br>
-     <strong>Población:</strong> $poblacion</p>
+  <h3 style='color: #1e482a;'>Datos del cliente</h3>
+  <p>
+    <strong>Nombre:</strong> $nombre<br>
+    <strong>Empresa:</strong> $nombreEmpresa<br>
+    <strong>Teléfono:</strong> $telefono
+  </p>
 
-  <h3>Productos solicitados</h3>
+  <h3 style='color: #1e482a;'>Dirección</h3>
+  <p>
+    <strong>Estado:</strong> $estado<br>
+    <strong>Municipio:</strong> $municipio<br>
+    <strong>Población:</strong> $poblacion
+  </p>
+
+  <h3 style='color: #1e482a;'>Productos solicitados</h3>
   <table>
     <thead>
       <tr>
@@ -77,25 +83,35 @@ $body = "
 </html>
 ";
 
-$to = "email1234prueba@gmail.com";
-$subject = "Cotización de tubos para: $nombre";
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-$headers .= "From: email1234prueba@gmail.com\r\n";
-$headers .= "Reply-To: email1234prueba@gmail.com\r\n";
+$mail = new PHPMailer(true);
 
-// ENVIAR CORREO
-$correoEnviado = mail($to, $subject, $body, $headers);
+try{
+  // Configuración del servidor SMTP de Gmail
+    $mail->CharSet = 'UTF-8';
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'email1234prueba@gmail.com';
+    $mail->Password = 'rejt cjgd fris cffi'; // contraseña de aplicación
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // usa TLS para puerto 587
+    $mail->Port = 587;
 
-// ENVIAR WHATSAPP (abre WhatsApp Web con mensaje)
-$mensajeWhatsApp = rawurlencode("*=====----- Nueva cotización =====-----*\n\n*Datos del cliente*\n*Nombre:* $nombre\n*Empresa:* $nombreEmpresa\n*Teléfono:* $telefono\n\n*Dirección*\n*Estado:* $estado\n*Municipio:* $municipio\n*Población:* $poblacion\n\n*Productos solicitados*\n$datallePedidosWhatsapp");
+    // Remitente y destinatario
+    $mail->setFrom('email1234prueba@gmail.com', $nombre);
+    $mail->addAddress('email1234prueba@gmail.com', "ZimbraTubos");
 
-if ($correoEnviado) {
-    echo json_encode([
+    // Contenido
+    $mail->isHTML(true);
+    $mail->Subject = "Cotización de tubos para: $nombre";
+    $mail->Body    = $body;
+    $mail->AltBody = "Cotización enviada de $nombre, con número de teléfono $telefono. Contactalo para saber los detalles";
+
+    $mail->send();
+
+  echo json_encode([
       'success' => true,
-      'whatsapp_link' => "https://wa.me/5217221417838?text=$mensajeWhatsApp",
-      'message' => "Tu cotización ha sido recibida.\nEn breve, nuestro equipo se pondrá en contacto contigo para ofrecerte una atención personalizada."
+      'message' => "$nombre tu cotización ha sido recibida.\nEn breve, nuestro equipo se pondrá en contacto contigo para ofrecerte una atención personalizada."
     ]);
-} else {
-    echo json_encode(['success' => false, 'message' => 'No se pudo enviar el correo.']);
+}catch(Exception $e){
+  echo json_encode(['success' => false, 'message' => 'No se pudo enviar el correo.', 'error' => $mail->ErrorInfo, $e->getMessage()]);
 }
