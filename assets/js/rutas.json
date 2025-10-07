@@ -1,150 +1,222 @@
 [
     {
         "ruta": "./assets/img/cards-obras/obras/galery_1.jpg",
-        "name": "galery_1"
+        "name": "galery_1",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_2.jpg",
-        "name": "galery_2"
+        "name": "galery_2",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_3.jpg",
-        "name": "galery_3"
+        "name": "galery_3",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_4.jpg",
-        "name": "galery_4"
+        "name": "galery_4",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_5.jpg",
-        "name": "galery_5"
+        "name": "galery_5",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_6.jpg",
-        "name": "galery_6"
+        "name": "galery_6",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_7.jpg",
-        "name": "galery_7"
+        "name": "galery_7",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_8.jpg",
-        "name": "galery_8"
+        "name": "galery_8",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_9.jpg",
-        "name": "galery_9"
+        "name": "galery_9",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_10.jpg",
-        "name": "galery_10"
+        "name": "galery_10",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_11.jpg",
-        "name": "galery_11"
+        "name": "galery_11",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_12.jpg",
-        "name": "galery_12"
+        "name": "galery_12",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_13.jpg",
-        "name": "galery_13"
+        "name": "galery_13",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_14.jpg",
-        "name": "galery_14"
+        "name": "galery_14",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_15.jpg",
-        "name": "galery_15"
+        "name": "galery_15",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_16.jpg",
-        "name": "galery_16"
+        "name": "galery_16",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_17.jpg",
-        "name": "galery_17"
+        "name": "galery_17",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_18.jpg",
-        "name": "galery_18"
+        "name": "galery_18",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_19.jpg",
-        "name": "galery_19"
+        "name": "galery_19",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_20.jpg",
-        "name": "galery_20"
+        "name": "galery_20",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_21.jpg",
-        "name": "galery_21"
+        "name": "galery_21",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_22.jpg",
-        "name": "galery_22"
+        "name": "galery_22",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_23.jpg",
-        "name": "galery_23"
+        "name": "galery_23",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_24.jpg",
-        "name": "galery_24"
+        "name": "galery_24",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_25.jpg",
-        "name": "galery_25"
+        "name": "galery_25",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_26.jpg",
-        "name": "galery_26"
+        "name": "galery_26",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_27.jpg",
-        "name": "galery_27"
+        "name": "galery_27",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_28.jpg",
-        "name": "galery_28"
+        "name": "galery_28",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_29.jpg",
-        "name": "galery_29"
+        "name": "galery_29",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_30.jpg",
-        "name": "galery_30"
+        "name": "galery_30",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_31.jpg",
-        "name": "galery_31"
+        "name": "galery_31",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_32.jpg",
-        "name": "galery_32"
+        "name": "galery_32",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_33.jpg",
-        "name": "galery_33"
+        "name": "galery_33",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_34.jpg",
-        "name": "galery_34"
+        "name": "galery_34",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_35.jpg",
-        "name": "galery_35"
+        "name": "galery_35",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_36.jpg",
-        "name": "galery_36"
+        "name": "galery_36",
+        "categoria": "Techumbres"
     },
     {
         "ruta": "./assets/img/cards-obras/obras/galery_37.jpg",
-        "name": "galery_37"
+        "name": "galery_37",
+        "categoria": "Techumbres"
+    },
+    {
+        "ruta": "./assets/img/cards-obras/obras/galery_38.jpg",
+        "name": "galery_38",
+        "categoria": "Agricultura"
+    },
+    {
+        "ruta": "./assets/img/cards-obras/obras/galery_39.jpg",
+        "name": "galery_39",
+        "categoria": "Agricultura"
+    },
+    {
+        "ruta": "./assets/img/cards-obras/obras/galery_40.jpg",
+        "name": "galery_40",
+        "categoria": "Agricultura"
+    },
+    {
+        "ruta": "./assets/img/cards-obras/obras/galery_41.jpg",
+        "name": "galery_41",
+        "categoria": "Agricultura"
+    },
+    {
+        "ruta": "./assets/img/cards-obras/obras/galery_42.jpg",
+        "name": "galery_42",
+        "categoria": "Agricultura"
+    },
+    {
+        "ruta": "./assets/img/cards-obras/obras/galery_43.jpg",
+        "name": "galery_43",
+        "categoria": "Agricultura"
+    },
+    {
+        "ruta": "./assets/img/cards-obras/obras/galery_44.jpg",
+        "name": "galery_44",
+        "categoria": "Agricultura"
     }
 ]

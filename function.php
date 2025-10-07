@@ -46,15 +46,15 @@
         </div>
     </div>
 
+    <!-- galeria -->
     <div class="text-center">
         <button type="button" class="w-auto bg-[#2f767c] rounded-md text-white text-xl font-bold px-4 py-2 transform duration-300 hover:bg-[#2f767c]/80 hover:-translate-y-1" id="button-galeria" onClick="viewGaleria()">Galería de instalación y usos</button>
     </div>
 
-    <div class="hidden" id="galeria">
-        <h2 class="text-2xl text-[#f78910] font-bold sm:p-0 p-2 mt-4">Techumbres</h2>
-        <div class="my-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 h-96 overflow-y-auto overflow-x-hidden w-full" id="grid-galeria">
-        <!-- Se llena desde JS -->
-        </div>
+    <div id="categoria-selector" class="flex gap-2 flex-wrap mt-4 hidden"></div>
+
+    <div id="galeria" class="hidden mt-6">
+    <!-- Aquí se insertan los títulos y grids dinámicamente -->
     </div>
 
     <!-- instructivo -->
