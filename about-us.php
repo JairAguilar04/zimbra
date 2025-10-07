@@ -1,6 +1,14 @@
 <?php
 $pageTitle = "Nosotros";
     include('./includes/header.php');
+
+    function years(){
+        $yearCreation = 2008;
+        $currentYear = date('Y');
+
+        $years = (int)$currentYear - $yearCreation;
+        return $years;
+    }
 ?>
     <section class="sm:mt-20 mt-14 flex-grow max-w-6xl mx-auto w-full p-4 sm:p-6 bg-white">
         <h2 class="text-center text-3xl text-[#1e482a] font-bold mt-5 mb-10">ZimbraTubos&reg;</h2>
@@ -9,7 +17,7 @@ $pageTitle = "Nosotros";
                 <div>
                     <h2 class="text-center text-2xl text-[#1e482a] font-bold sm:mt-0 -mt-5">¿Quiénes somos?</h2>
                     <p class="my-5 text-justify">
-                        En <span class="text-[#1e482a] font-bold">Zimbratubos&reg;</span> somos una empresa mexicana, líder en la fabricación de tubos de cimbra. Con más de 15 años de experiencia y la confianza de más de 1,000 clientes en todo el país, ofrecemos productos de la más alta calidad que cumplen con exigentes estándares industriales.
+                        En <span class="text-[#1e482a] font-bold">Zimbratubos&reg;</span> somos una empresa mexicana, líder en la fabricación de tubos de cimbra. Con más de <?= years(); ?> años de experiencia y la confianza de más de 1,000 clientes en todo el país, ofrecemos productos de la más alta calidad que cumplen con exigentes estándares industriales.
                     </p>
                     <p class="text-justify">
                         Fabricamos tubos de zimbrado en múltiples medidas para adaptarnos a las necesidades de cada proyecto, brindando resistencia, precisión y confianza en cada pieza.

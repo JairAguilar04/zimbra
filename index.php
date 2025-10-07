@@ -64,7 +64,7 @@ include("./includes/header.php");
                         <tr>
                             <th>Diámetro (cm)</th>
                             <th>Largo (m)</th>
-                            <th>Guía técnica</th>
+                            <th>Ficha técnica</th>
                         </tr>
                     </thead>
                     <tbody class="text-center" id="cuerpo-tabla">

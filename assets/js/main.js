@@ -249,7 +249,7 @@ function addPedido(medida) {
         <span class="block text-gray-700 font-semibold basis-1/4 select-none">
           ${pedido} cm<span class="font-bold text-red-600">*</span>
         </span>
-        <input type="number" name="${pedido}" id="${pedido}" class="basis-3/4 w-full h-10 text-gray-700 border-b-2 border-[#2f767c] px-2 outline-none" min="0" />
+        <input type="number" name="${pedido}" id="${pedido}" class="basis-3/4 w-full h-10 text-gray-700 border-b-2 border-[#2f767c] px-2 outline-none" min="0" placeholder="Ingresa la cantidad" />
       `;
     listaPedido.appendChild(li);
   });

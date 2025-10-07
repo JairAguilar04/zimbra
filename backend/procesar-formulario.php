@@ -39,7 +39,7 @@ try {
 
     // Contenido
     $mail->isHTML(true);
-    $mail->Subject = "$asunto";
+    $mail->Subject = $asunto;
     $mail->Body    = "
         <table style=\"width: 90%; font-family: Arial, sans-serif; border-collapse: collapse;\">
             <tr>

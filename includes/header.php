@@ -226,7 +226,7 @@
             <h2 class="text-lg font-semibold mb-2">Este sitio utiliza cookies 🍪</h2>
             <p class="text-sm text-gray-600 mb-4">
                 Utilizamos cookies para mejorar tu experiencia en nuestro sitio. Al continuar navegando, aceptas nuestro
-                <a href="./policyCookies.php" class="text-[#1e482a] underline hover:bg-[#1e482a]/20 hover:font-semibold">uso de cookies</a>.
+                <a href="./policy-cookies.php" class="text-[#1e482a] underline hover:bg-[#1e482a]/20 hover:font-semibold">uso de cookies</a>.
             </p>
             <div class="flex justify-end gap-2">
                 <button id="acceptCookies" class="bg-[#2f767c] hover:bg-[#2f767c]/80 text-white text-sm px-4 py-2 rounded transition">Aceptar</button>
