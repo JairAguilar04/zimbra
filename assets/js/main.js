@@ -1,20 +1,21 @@
 // carga los datos de la tabla
 const medidas = [
-  { diametro: 10, largo: 3, url: "./assets/pdf/diametro_10.pdf" },
+  { diametro: 10, largo: 3 },
   { diametro: 15, largo: 3 },
   { diametro: 20, largo: 3 },
   { diametro: 25, largo: 3 },
   { diametro: 30, largo: 3 },
   { diametro: 35, largo: 3 },
-  { diametro: 40, largo: 3, url: "./assets/pdf/diametro_40.pdf" },
+  { diametro: 40, largo: 3},
   { diametro: 45, largo: 3 },
   { diametro: 50, largo: 3 },
   { diametro: 55, largo: 3 },
-  { diametro: 60, largo: 3, url: "./assets/pdf/diametro_60.pdf" },
+  { diametro: 60, largo: 3 },
   { diametro: 70, largo: 3 },
   { diametro: 80, largo: 3 },
   { diametro: 90, largo: 3 },
-  { diametro: 100, largo: 3, url: "./assets/pdf/diametro_100.pdf" },
+  { diametro: 100, largo: 3 },
+  // { diametro: 100, largo: 3, url: "./assets/pdf/diametro_100.pdf" },
   { diametro: 120, largo: 3 },
 ];
 
